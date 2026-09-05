@@ -1,64 +1,50 @@
-site_name: MkDocs template
-site_description: MkDocs template
-site_url: https://seekanotherland.xyz/mkdocs-template/
-repo_name: Bit-Part-Young/mkdocs-template/
-repo_url: https://github.com/Bit-Part-Young/mkdocs-template/
+site_name: 史建威个人博客 | 11时序矩阵本体论
+site_url: https://sjw719.github.io/11/
+repo_url: https://github.com/sjw719/11
 edit_uri: blob/main/docs/
-copyright: Copyright &copy 2023-2024
-
+site_author: 史建威
+site_description: 山东威海 · 理论物理EPD工程组官方文档站
+copyright: Copyright © 2026 史建威 · 山东威海理论物理EPD工程组
+remote_branch: gh-pages
 
 theme:
   name: material
   language: zh
-  icon: 
-    logo: material/notebook-outline
   features:
-    - content.tooltips
-    # 每个文档的顶部显示编辑和查看源码按钮
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate
-    - content.code.copy
-    - content.code.select
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.indexes
     - navigation.top
-    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
     - toc.follow
-  # palette:
-  # - scheme: default
-  # reference: https://github.com/HobbitQia/notebook/blob/note1/mkdocs.yml
-  palette:     #切换昼夜模式的颜色，审美差就用默认，专业点就自定义
-    - media: "(prefers-color-scheme: light)" 
-      scheme: default  #配色方案：浅色模式
-      # primary: brown  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
-      # accent: brown  #强调色，默认蓝，可以交互的元素如悬停链接、按钮和滚动条
+    - content.code.copy
+    - content.code.annotate
+    - content.action.view
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/weather-sunny #图标，太阳
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"  
-      scheme: slate  #配色方案：深色模式
-      # primary: Brown  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+        icon: material/weather-sunny
+        name: 切换至暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
       toggle:
-        icon: material/weather-night  #图标，月亮
-        name: Switch to light mode
-
+        icon: material/weather-night
+        name: 切换至亮色模式
 
 extra:
   social:
-    - name: GitHub
-      icon: fontawesome/brands/github
-      link: https://github.com/Bit-Part-Young
-    - name: Home
-      icon: fontawesome/solid/house-chimney
-      link: https://seekanotherland.xyz/mkdocs-template/
-    - name: Blog
-      icon: fontawesome/solid/blog
-      link: https://seekanotherland.xyz/hexo-demo
+    - icon: fontawesome/brands/github
+      link: https://github.com/sjw719
+      name: GitHub 主页
+    - icon: fontawesome/solid/envelope
+      link: mailto:1625027134@qq.com
+      name: 联系邮箱
+  generator: false
 
-
-# Extensions
 markdown_extensions:
   - toc:
       permalink: true
@@ -82,7 +68,7 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.highlight:
@@ -90,34 +76,20 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-
-# reference: https://github.com/TonyCrane/note/blob/master/mkdocs.yml
 extra_css:
-  - css/tasklist.css
-  # 公式渲染
-  - https://cdn.tonycrane.cc/utils/katex.min.css
-
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css
 
 extra_javascript:
-  # 公式渲染
-  - https://cdn.tonycrane.cc/utils/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js
   - js/katex.js
-
 
 plugins:
   - search
-  - changelog
-  - statistics:
-      page_check_metadata: 
-  - mkdocs-jupyter
+  - glightbox:
+      width: 80%
   - git-revision-date-localized:
       type: datetime
       timezone: Asia/Shanghai
       locale: zh
       enable_creation_date: true
-  - glightbox:
-      width: 80%
-
-
-nav:
-  - Home: index.md
