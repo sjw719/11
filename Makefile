@@ -1,0 +1,2 @@
+mkdocs:
+	@./update_mkdocs
