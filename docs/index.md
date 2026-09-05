@@ -1,145 +1,57 @@
-# MkDocs template
+# 11时序矩阵本体论 · 理论物理文档站
 
-[![CI Status](https://github.com/Bit-Part-Young/mkdocs-template/actions/workflows/mkdocs-deploy.yml/badge.svg)](https://github.com/Bit-Part-Young/mkdocs-template/actions/workflows/mkdocs-deploy.yml)
+!!! info "站点信息"
+    **主办**：史建威 个人博客 · 山东威海 理论物理EPD工程组  
+    **核心体系**：11T-Matrix 本体论  
+    **联系邮箱**：1625027134@qq.com
 
-Mkdocs 模板。
-
-**Features**:
-
-- 已配置 GitHub Actions，可自动部署到 GitHub Pages
-- LaTeX 公式渲染
+本网站基于 MkDocs 构建，专注于理论物理基础理论探索，系统呈现 11时序矩阵本体论的核心引理、研究论文、工程项目与哲学评述，支持 LaTeX 公式稳定渲染、全文检索与自动持续集成发布。
 
 ---
 
-效果图：
+## 内容板块
 
-![mkdocs-effect](./assets/mkdocs-effect.png)
+本站内容分为四大板块，按体系层级有序排布：
 
----
+### 第一部分 · 核心引理 Part I · Core Lemmas
+本板块收录体系的核心数学引理与基础定理，从第一性原理出发构建拓扑涌现的数学框架，是整个理论体系的基石。
+- 沃利斯-拓扑对称恢复引理
+- 离散拓扑与连续常数的涌现机制
+- 对称性破缺的几何本源
 
-## 搭建
+### 第二部分 · 研究论文 Part II · Research Papers
+本板块收录完整的专题研究论文，覆盖粒子物理、宇宙学、场论等方向的理论推导与数值验证。
+- EPD 系列工程配套理论论文
+- 真空涨落、质量生成与味混合理论
+- 循环宇宙模型的数学基础
 
-- 搭建 MkDocs 环境
+### 第三部分 · 工程项目 Part III · Engineering Projects
+本板块收录工程化落地项目与技术方案，记录理论体系的数值验证、模拟计算与工程实现路径。
+- EPD-03 引力常数推导工程
+- P10 星系旋转曲线拟合工程
+- 标准模型参数拓扑化工程
 
-```bash
-# 方式 1
-conda create -n mkdocs python=3.11
-
-conda activate mkdocs
-pip install -r requirements.txt
-
-# 方式 2
-./setup.sh
-
-source venv/bin/activate
-```
-
-- 自定义修改 `mkdocs.yml` 配置文件相关内容
-
-- 本地预览；手动部署到 GitHub Pages
-
-```bash
-#  本地预览
-mkdocs serve
-
-# 部署到 GitHub Pages
-mkdocs gh-deploy
-```
+### 第四部分 · 哲学评述 Part IV · Philosophy Reviews
+本板块收录理论的哲学延伸与方法论讨论，探讨本体论立场、科学范式与思想溯源。
+- 双态一元论的本体论基础
+- 离散拓扑范式对场论的超越
+- 循环宇宙的哲学意蕴
 
 ---
 
-## 使用
+## 站点特性
 
-### LaTeX 公式
-
-内联公式：使用 `$...$`，如 $f(x) = x^2$ 。
-
-行间公式：使用 `$$...$$`，如
-
-```markdown
-$$
-F(x) = \int^a_b \frac{1}{2}x^4
-$$
-```
-
-$$
-F(x) = \int^a_b \frac{1}{2}x^4
-$$
+- ✅ **专业 LaTeX 公式渲染**：基于 KaTeX + Arithmatex，完美支持物理、数学公式、多行对齐、矩阵与张量符号
+- ✅ **自动构建发布**：GitHub Actions 自动构建部署，提交 Markdown 源码即可更新站点
+- ✅ **全文智能检索**：支持标题、正文、公式关键词全文搜索
+- ✅ **明暗双模式**：自动跟随系统切换亮色/暗色阅读模式
+- ✅ **版本追溯**：自动记录文档更新日期，支持提交历史追溯
 
 ---
 
-### 不同代码块的互相切换
+## 联系与说明
 
-=== "Python"
+所有内容均为理论物理研究交流使用，欢迎学术讨论与指正。
+如需联系，请致信：`1625027134@qq.com`
 
-    ```python
-    print("Hello, Python!")
-    ```
-
-=== "JavaScript"
-
-    ```javascript
-    console.log("Hello, JavaScript!");
-    ```
-
----
-
-### mkdocs Admonitions
-
-!!! abstract
-    这里是 abstract
-
-!!! note
-    这里是 note
-
-!!! tip
-    这里是 tip
-
-!!! info
-    这里是 info
-
-!!! success
-    这里是 success
-
-!!! question
-    这里是 question
-
-!!! warning
-    这里是 warning
-
-!!! danger
-    这里是 danger
-
-!!! failure
-    这里是 failure
-
-!!! bug
-    这里是 bug
-
-!!! example
-    这里是 example
-
-!!! quote
-    这里是 quote
-
----
-
-toggle admonitions
-
-??? note
-    这里是 toggle note
-
----
-
-expanded toggle admonitions
-
-???+ note
-    这里是 expanded toggle note
-
----
-
-inline admonitions
-
-这里是 inline note
-!!! note inline end
-    这里是 inline note
+> 山东威海 · 理论物理EPD工程组 出品
