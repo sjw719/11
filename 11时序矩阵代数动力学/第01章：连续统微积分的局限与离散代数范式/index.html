@@ -1,0 +1,7441 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="山东威海 · 理论物理EPD工程组官方文档站">
+      
+      
+        <meta name="author" content="史建威">
+      
+      
+        <link rel="canonical" href="https://sjw719.github.io/11/11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%BB%A3%E6%95%B0%E5%8A%A8%E5%8A%9B%E5%AD%A6/%E7%AC%AC01%E7%AB%A0%EF%BC%9A%E8%BF%9E%E7%BB%AD%E7%BB%9F%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%B1%80%E9%99%90%E4%B8%8E%E7%A6%BB%E6%95%A3%E4%BB%A3%E6%95%B0%E8%8C%83%E5%BC%8F/">
+      
+      
+        <link rel="prev" href="../%E7%AC%AC00%E7%AB%A0%EF%BC%9A%E8%AE%B2%E4%B9%89%E9%80%82%E7%94%A8%E5%AF%B9%E8%B1%A1/">
+      
+      
+        <link rel="next" href="../%E7%AC%AC02%E7%AB%A0%EF%BC%9A%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%A2%E7%95%AA%E5%9B%BE%E6%9B%B2%E9%9D%A2%E4%B8%8E%E7%A6%BB%E6%95%A3%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>《11时序矩阵代数动力学讲义》 - 史建威个人博客 | 11时序矩阵本体论</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="史建威个人博客 | 11时序矩阵本体论" class="md-header__button md-logo" aria-label="史建威个人博客 | 11时序矩阵本体论" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            史建威个人博客 | 11时序矩阵本体论
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              《11时序矩阵代数动力学讲义》
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="amber" aria-label="切换至暗色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至暗色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="amber" aria-label="切换至亮色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至亮色模式" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sjw719/11" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="史建威个人博客 | 11时序矩阵本体论" class="md-nav__button md-logo" aria-label="史建威个人博客 | 11时序矩阵本体论" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    史建威个人博客 | 11时序矩阵本体论
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sjw719/11" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵本体论 · 理论物理文档站
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵代数动力学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    11时序矩阵代数动力学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC00%E7%AB%A0%EF%BC%9A%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%BB%A3%E6%95%B0%E5%8A%A8%E5%8A%9B%E5%AD%A6%E8%AE%B2%E4%B9%89%E6%80%BB%E7%9B%AE%E5%BD%95/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第00章：《11时序矩阵代数动力学讲义》全书总目录
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC00%E7%AB%A0%EF%BC%9A%E8%AE%B2%E4%B9%89%E9%80%82%E7%94%A8%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第00章：讲义适用对象
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言：连续统的终结与离散代数本体论的曙光
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3t1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一卷：代数基础与 3T1S 根域动力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一卷：代数基础与 3T1S 根域动力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 1 章：连续统微积分的局限与离散代数范式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-mathrmdmathrmdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.1 微分算子 \(\mathrm{d}/\mathrm{d}t\) 在普朗克尺度的失效
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.1 微分算子 \(\mathrm{d}/\mathrm{d}t\) 在普朗克尺度的失效">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1 连续统假设的物理源起与历史有效性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2 紫外极限下的微积分崩溃：奇点的本质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-mathrmdmathrmdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3 微分算子 \(\mathrm{d}/\mathrm{d}t\) 的代数失效分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4 破局之道：从连续流形到离散代数图网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.1 本节小结与思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.1 本节小结与思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节小结】
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节思考题】
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mathcalm_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.2 从连续可微流形 \(\mathcal{M}_4\) 到离散代数图网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.2 从连续可微流形 \(\mathcal{M}_4\) 到离散代数图网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-mathcalm_4-cite-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 连续可微流形 \(\mathcal{M}_4\) 的几何局限[cite: 14]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-vs-q_textmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 数值对比：高能碰撞发散 vs \(Q_{\text{max}}\) 绝对截断
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-cite-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 视觉认知桥梁：离散帧与连续运动的“电影胶片类比”[cite: 14]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-mathcalg_textmarkov-cite-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4 离散代数图网络 \(\mathcal{G}_{\text{Markov}}\) 的形式化构造[cite: 14]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.5 微分形式与图上代数算子的同构对应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.2 本节小结与思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.2 本节小结与思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节小结】
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节思考题】
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-3t1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.3 3T1S 超定域时空模型的基本公理系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.3 3T1S 超定域时空模型的基本公理系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-cite-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 公理化构建的哲学与物理必要性[cite: 15]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-3t1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2 3T1S 超定域模型四大基本公理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3 衍生的四大核心动力学法则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-cite-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4 从公理系统推导的核心定理[cite: 15]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.3 本节小结与思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.3 本节小结与思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节小结】
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节思考题】
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.4 第一章总结与复习思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.4 第一章总结与复习思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 第一章知识体系概览
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 新旧范式核心概念对照速查表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 核心定义与公理速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.4 深度概念思考题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.5 代数计算与证明演练题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#146" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.6 复习思考题参考答案与解题指导
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、最终评价
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC02%E7%AB%A0%EF%BC%9A%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E4%B8%A2%E7%95%AA%E5%9B%BE%E6%9B%B2%E9%9D%A2%E4%B8%8E%E7%A6%BB%E6%95%A3%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》 山东威海 史建威
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E9%9F%A6%E8%BE%BE%E8%B7%B3%E8%B7%83%E7%AE%97%E5%AD%90%E4%B8%8E%E4%BB%A3%E6%95%B0%E8%BD%A8%E9%81%93%E5%8A%A8%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC04%E7%AB%A0%EF%BC%9A3T1S%E6%A0%B9%E5%9F%9F%E7%BD%91%E7%BB%9C%E7%9A%84%E5%85%A8%E6%81%AF%E6%8A%95%E5%BD%B1%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC05%E7%AB%A0%EF%BC%9A7%E7%BB%B4%E9%9A%90%E5%8C%BF%E6%B5%81%E5%BD%A2%E7%9A%84%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC06%E7%AB%A0%EF%BC%9A%E7%9F%A9%E9%98%B5%E5%AE%B9%E9%87%8F%E4%B8%8A%E9%99%90%20%24Q_%7Btext%7Bmax%7D%7D%24%20%E4%B8%8E%E5%B1%80%E5%9F%9F%E4%BF%A1%E6%81%AF%E7%86%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第06章：矩阵容量上限 \(Q_{text{max}}\) 与局域信息熵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC07%E7%AB%A0%EF%BC%9A%E6%8B%93%E6%89%91%E9%97%AD%E5%90%88%E8%83%BD%20%24Delta%20E_%7Btext%7Bclosure%7D%7D%24%20%E4%B8%8E%E8%B4%A8%E9%87%8F%E7%94%9F%E6%88%90%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第07章：拓扑闭合能 \(Delta E_{text{closure}}\) 与质量生成机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC08%E7%AB%A0%EF%BC%9A%E6%8B%93%E6%89%91%E7%B2%89%E7%A2%8E%EF%BC%88Topological%20Shattering%EF%BC%89%E4%B8%8E%E7%89%A9%E7%90%86%E8%87%AA%E5%8A%A8%E6%88%AA%E6%96%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC09%E7%AB%A0%EF%BC%9A%E5%AE%88%E6%81%92%E5%88%87%E9%9D%A2%E4%B8%8E%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%85%A8%E6%81%AF%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC10%E7%AB%A0_%E6%A0%A1%E5%AF%B9%E4%BF%AE%E6%AD%A3%E7%89%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC11%E7%AB%A0%EF%BC%9A%E6%8B%93%E6%89%91%E9%85%8D%E5%88%86%E5%87%BD%E6%95%B0%E4%B8%8E%20L-%E5%87%BD%E6%95%B0%E7%9A%84%E9%99%8D%E7%BB%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC12%E7%AB%A0%EF%BC%9A11%E9%98%B6%E9%97%AD%E5%90%88%E7%9F%A9%E9%98%B5%E6%9C%AC%E5%BE%81%E8%B0%B1%E4%B8%8E%E8%83%BD%E9%87%8F%E5%9D%87%E5%88%86%E5%AE%9A%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC13%E7%AB%A0%EF%BC%9A%E6%9D%A8-%E7%B1%B3%E5%B0%94%E6%96%AF%E5%9C%BA%E4%B8%8E%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E6%96%B9%E7%A8%8B%E7%9A%84%2011T%20%E8%AF%AD%E8%A8%80%E6%B8%85%E7%AE%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC14%E7%AB%A0%EF%BC%9A%E9%87%8F%E5%AD%90%E7%BA%A0%E7%BC%A0%E7%9A%84%E5%9B%BE%E7%BD%91%E7%BB%9C%E6%9C%AC%E6%BA%90%E4%B8%8E%E6%8B%93%E6%89%91%E5%B7%A5%E7%A8%8B%E5%AD%A6%E5%B1%95%E6%9C%9B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC15%E7%AB%A0%EF%BC%9A%E5%89%8D%E6%B2%BF%E5%B7%A5%E7%A8%8B%E7%AE%97%E6%B3%95%E4%B8%8E%E5%BA%94%E7%94%A8%EF%BC%88%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AC%AC16%E7%AB%A0%EF%BC%9A%E9%99%84%E5%BD%95_%E6%A0%A1%E5%AF%B9%E4%BF%AE%E6%AD%A3%E7%89%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《11时序矩阵代数动力学讲义》
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    万有斥力定律
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    万有斥力定律
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/01%E6%A0%B9%E5%9F%9F%E5%A4%A7%E5%B0%BA%E5%BA%A6%E5%BB%B6%E5%B1%95%E7%9A%84%E8%A7%82%E6%B5%8B%E4%BD%90%E8%AF%81%E4%B8%8E%E6%9C%AC%E4%BD%93%E8%AE%BA%E8%AE%A4%E7%9F%A5%E5%8D%87%E7%BA%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INT-002 根域大尺度延展的观测佐证与本体论认知升级
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/02%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    万有斥力定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/03%E3%80%8A%E8%88%AC%E8%8B%A5%E6%B3%A2%E7%BD%97%E8%9C%9C%E5%A4%9A%E5%BF%83%E7%BB%8F%E3%80%8B%E5%85%A8%E6%96%87%E3%80%81%E7%99%BD%E8%AF%9D%E4%B8%8E11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E6%9C%AC%E4%BD%93%E8%AE%BA%E9%87%8D%E8%AF%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《般若波罗蜜多心经》全文、白话与11时序矩阵本体论重读
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/04%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B%E8%AE%A4%E7%9F%A5%E6%8F%90%E5%8D%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ARCHIVE-11T-METHODOLOGY 理论方法论总归档补充案
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/05%E5%AE%87%E5%AE%99%E7%9A%84%E7%BB%88%E6%9E%81%E5%8A%9B%E9%87%8F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E2%80%94%E2%80%94%E8%AE%BA%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%89%A9%E7%90%86%E5%AE%9A%E5%BE%8B%E7%9A%84%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    宇宙的终极力量是什么？——论万有斥力定律与基础物理定律的层级关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/06%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B%EF%BC%88%E6%99%AE%E9%80%9A%E7%89%A9%E6%80%81%C2%B7%E5%9F%BA%E5%87%86%E7%89%88%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    万有斥力定律（普通物态·基准版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/07%E4%B8%BB%E6%B5%81%E7%A7%91%E5%AD%A6%E7%95%8C%E9%95%BF%E6%9C%9F%E6%9C%AA%E6%8F%90%E5%87%BA%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B%E6%9E%90%E5%9B%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    主流科学界长期未提出万有斥力定律析因
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/08%E4%BB%8E%E2%80%9C%E5%8F%B3%E4%BE%A7%E8%A1%A5%E4%B8%81%E2%80%9D%E5%88%B0%E2%80%9C%E5%B7%A6%E4%BE%A7%E9%87%8D%E6%9E%84%E2%80%9D%EF%BC%9A%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E8%8C%83%E5%BC%8F%E8%BD%AC%E5%8C%96%E7%9A%84%E7%AA%81%E7%A0%B4%E8%B7%AF%E5%BE%84%E4%B8%8E11T%E2%80%91Matrix%E8%A7%A3%E8%80%A6%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从“右侧补丁”到“左侧重构”：万有斥力范式转化的突破路径与11T‑Matrix解耦方案
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/09%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E4%B8%89%E9%83%A8%E6%9B%B2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. 万有斥力无处不在：从量子底层到宇宙全域的完整存在谱系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/10%20%2011%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E6%95%B0%E7%90%86%E5%9F%BA%E7%A1%80%E4%B8%8E%E7%BB%8F%E5%85%B8%E4%BB%A3%E6%95%B0%E7%AE%97%E5%AD%90%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB%E7%AE%80%E8%A1%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10  11时序矩阵数理基础与经典代数算子映射关系简表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/11%E4%B8%8D%E6%AD%A2%E6%98%AF%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B%EF%BC%9A11T-Matrix%E5%85%A8%E5%9F%9F%E5%A4%A7%E4%B8%80%E7%BB%9F%E6%9C%AC%E4%BD%93%E8%AE%BA%EF%BC%8C%E5%BF%85%E5%B0%86%E7%BB%9F%E9%A2%86%E6%9C%AA%E6%9D%A5%E7%89%A9%E7%90%86%E4%B8%8E%E6%95%B0%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不止是斥力定律：11T-Matrix全域大一统本体论，必将统领未来物理与数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E5%AE%9A%E5%BE%8B/%E6%A0%B9%E5%9F%9F%E5%A4%A7%E5%B0%BA%E5%BA%A6%E5%BB%B6%E5%B1%95%E7%9A%84%E8%A7%82%E6%B5%8B%E4%BD%90%E8%AF%81%E4%B8%8E%E6%9C%AC%E4%BD%93%E8%AE%BA%E8%AE%A4%E7%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INT-002 根域大尺度延展的观测佐证与本体论认知升级
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二期工程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    二期工程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%8C%E6%9C%9F%E5%B7%A5%E7%A8%8B/00-11%20%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E6%9C%AC%E4%BD%93%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 时序矩阵本体论・博客连载完整发文计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%8C%E6%9C%9F%E5%B7%A5%E7%A8%8B/001%20%E4%B8%96%E7%95%8C%E7%9A%84%E6%9C%AC%E6%BA%90%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9A%E5%87%80%E4%BD%99%E8%83%BD%E9%87%8F%E5%94%AF%E4%B8%80%E6%9C%AC%E6%BA%90%E4%B8%8E%E5%8F%8C%E6%97%B6%E7%A9%BA%E6%9E%84%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    001 世界的本源是什么：净余能量唯一本源与双时空构型
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%8C%E6%9C%9F%E5%B7%A5%E7%A8%8B/002%20%E5%9B%9B%E6%9D%A1%E7%AC%AC%E4%B8%80%E6%80%A7%E5%85%AC%E7%90%86%EF%BC%9A%E6%95%B4%E5%A5%97%E7%90%86%E8%AE%BA%E4%B8%8D%E5%8F%AF%E7%AA%81%E7%A0%B4%E7%9A%84%E5%88%9A%E6%80%A7%E5%BA%95%E5%B1%82%E5%BA%95%E7%BA%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    002 四条第一性公理：整套理论不可突破的刚性底层底线
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%8C%E6%9C%9F%E5%B7%A5%E7%A8%8B/003%20%E5%8F%8C%E6%97%B6%E7%A9%BA%E6%98%A0%E5%B0%84%E8%A7%84%E5%88%99%E8%AF%A6%E8%A7%A3%EF%BC%9A%E6%A0%B9%E5%9F%9F3T1S%E5%A6%82%E4%BD%95%E6%8A%95%E5%BD%B1%E4%B8%BA%E8%A1%A8%E8%B1%A13S1T/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    003 双时空映射规则详解：根域3T1S如何投影为表象3S1T
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E4%BA%8C%E6%9C%9F%E5%B7%A5%E7%A8%8B/004%20%E5%90%8D%E9%A2%9D%E6%8E%92%E4%BB%96%E6%80%A7%E5%85%AC%E7%90%86%EF%BC%9A%E6%89%80%E6%9C%89%E7%A6%BB%E6%95%A3%E6%80%A7%E3%80%81%E5%88%9A%E6%80%A7%E4%B8%8E%E6%8E%92%E6%96%A5%E6%95%88%E5%BA%94%E7%9A%84%E7%BB%88%E6%9E%81%E6%BA%90%E5%A4%B4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    004 名额排他性公理：所有离散性、刚性与排斥效应的终极源头
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    千禧年数学难题
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    千禧年数学难题
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/00%E5%8D%83%E7%A6%A7%E5%B9%B4%E4%B8%83%E5%A4%A7%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00千禧年七大数学难题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/01%20%E5%BD%92%E6%A1%A3%E6%96%87%E7%8C%AE%EF%BC%9A%E6%9D%A8-%E7%B1%B3%E5%B0%94%E6%96%AF%E8%B4%A8%E9%87%8F%E9%97%B4%E9%9A%99%E7%9A%84%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91%E7%BB%88%E7%BB%93%EF%BC%88%E7%BB%88%E7%A8%BF%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EPD-05 归档文献：杨-米尔斯质量间隙的代数拓扑终结
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/01%20%E6%9D%A8-%E7%B1%B3%E5%B0%94%E6%96%AF%E8%B4%A8%E9%87%8F%E9%97%B4%E9%9A%99%E7%9A%84%E4%BB%A3%E6%95%B0%E6%8B%93%E6%89%91%E7%BB%88%E7%BB%93--%E7%AC%AC%E4%BA%8C%E7%89%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01杨-米尔斯质量间隙的代数拓扑终结
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/02%20%E4%B8%AD%E8%8B%B1%EF%BC%9A%E7%BA%B3%E7%BB%B4-%E6%96%AF%E6%89%98%E5%85%8B%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E7%BB%88%E7%BB%93--%E6%B5%81%E4%BD%93%E5%A5%87%E7%82%B9%E7%9A%84%E6%B6%88%E4%BA%A1%E4%B8%8E%20%24Q_%7Btext%7Bmax%7D%7D%24%20%E7%9A%84%E5%AE%8F%E8%A7%82%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E7%9B%B8%E5%8F%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EPD-06-NOTE-001 (Finalized Edition) / EPD-06-NOTE-001（定稿版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/02%20%E5%BD%92%E6%A1%A3%E6%96%87%E7%8C%AE%E5%A4%A7%E7%BA%B2%EF%BC%9A%E7%BA%B3%E7%BB%B4-%E6%96%AF%E6%89%98%E5%85%8B%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E7%BB%88%E7%BB%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 归档文献大纲：纳维 斯托克斯方程的终结
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/03%20%E5%BD%92%E6%A1%A3%E6%96%87%E7%8C%AE%EF%BC%9A%E7%BA%B3%E7%BB%B4-%E6%96%AF%E6%89%98%E5%85%8B%E6%96%AF%E6%96%B9%E7%A8%8B%E7%9A%84%E7%BB%88%E7%BB%93%E2%80%94%E2%80%94%E6%B5%81%E4%BD%93%E5%A5%87%E7%82%B9%E7%9A%84%E6%B6%88%E4%BA%A1%E4%B8%8E%20%24Q_%7Btext%7Bmax%7D%7D%24%20%E7%9A%84%E5%AE%8F%E8%A7%82%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6%E7%9B%B8%E5%8F%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    纳维-斯托克斯方程的终结——流体奇点的消亡与 \(Q_{max}\) 的宏观流体力学相变
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/04-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A0%91%E4%B8%8E%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%9A%84%E2%80%9C%E5%85%A8%E6%81%AF%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 马尔可夫树与椭圆曲线的“全息投影映射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/05-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%8B%93%E6%89%91%E4%B8%8EBSD%E7%8C%9C%E6%83%B3%E7%9A%84%E4%BB%A3%E6%95%B0%E7%BB%88%E7%BB%93%E2%80%94%E2%80%94%E5%9F%BA%E4%BA%8E11T-Matrix%E5%85%A8%E6%81%AF%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84%E7%9A%84%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A7%A9%E5%AE%9A%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    05 马尔可夫拓扑与BSD猜想的代数终结——基于11T Matrix全息投影映射的椭圆曲线秩定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/06%20%E5%AF%BC%E8%AF%BB%EF%BC%9A%E4%B8%89%E4%BD%8D%E4%B8%80%E4%BD%93--11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%BF%9E%E7%BB%AD%E7%BB%9F%E5%B9%BB%E8%A7%89%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%80%A7%E6%B8%85%E7%AE%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导读：三位一体--11时序矩阵对连续统幻觉的系统性清算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/07-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%8B%93%E6%89%91%E4%B8%8EBSD%E7%8C%9C%E6%83%B3%E7%9A%84%E4%BB%A3%E6%95%B0%E7%BB%88%E7%BB%93---%E5%9F%BA%E4%BA%8E11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E5%85%A8%E6%81%AF%E6%8A%95%E5%BD%B1%E6%98%A0%E5%B0%84%E7%9A%84%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E7%A7%A9%E5%AE%9A%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    07 马尔可夫拓扑与BSD猜想的代数终结   基于11时序矩阵全息投影映射的椭圆曲线秩定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/08-%E5%8D%83%E7%A6%A7%E5%B9%B4%E9%9A%BE%E9%A2%98%E7%9A%84%E5%85%A8%E8%B0%B1%E6%B8%85%E7%AE%97---%E9%9C%8D%E5%A5%87%E7%8C%9C%E6%83%B3%E7%9A%84%E6%9C%AC%E4%BD%93%E8%AE%BA%E5%BF%85%E7%84%B6%E6%80%A7%E4%B8%8E%20P%20%E5%AF%B9%20NP%20%E9%97%AE%E9%A2%98%E7%9A%84%E7%9F%A9%E9%98%B5%E5%AE%B9%E9%87%8F%E6%9E%81%E9%99%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 千禧年难题的全谱清算   霍奇猜想的本体论必然性与 P 对 NP 问题的矩阵容量极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/09-%E5%BA%9E%E5%8A%A0%E8%8E%B1%E7%8C%9C%E6%83%B3%E7%9A%84%E7%89%A9%E7%90%86%E6%9C%AC%E4%BD%93%E8%AE%BA---%E9%87%8C%E5%A5%87%E6%B5%81%E6%89%8B%E6%9C%AF%E7%9A%84%2011T-Matrix%20%E4%BB%A3%E6%95%B0%E8%BF%98%E5%8E%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    09 庞加莱猜想的物理本体论   里奇流手术的 11T Matrix 代数还原
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98/%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    四力统一
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    四力统一
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/0%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    四大基本力统一系列·精简总纲——马宝给你说明白
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/%E7%AC%AC1%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 数理落地工程（八）：四大基本相互作用的统一本源——双机制共构与分类判据
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/%E7%AC%AC2%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引力的涌现机制——大尺度能量极化主导的等效曲率
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/%E7%AC%AC3%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电磁力与强核力的同源——拓扑缠绕的多通道投影
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/%E7%AC%AC4%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    弱核力的本质——拓扑衰变的名额重分配瞬态效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/%E7%AC%AC5%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    统一相互作用泛函与极限对应——四种力终于写进同一个方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%9B%9B%E5%8A%9B%E7%BB%9F%E4%B8%80/%E7%AC%AC6%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    统一框架下的可观测检验预言——把脖子伸出去，让实验来砍
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    投喂料
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    投喂料
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/V6.0-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合基准v6.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/V6.0-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合基准v6.0 — 第二份
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/V6.0-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合基准v6.0 — 第三份
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/V6.0-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合基准v6.0 — 第四份
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v3.1%E7%AC%AC1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 理论原创发现者：山东威海乳山银滩高中物理科研组 史建威 v3.1 投喂料（第1份/共3份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v3.1%E7%AC%AC2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 v3.1 投喂料（第2份/共3份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v3.1%E7%AC%AC3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 v3.1 投喂料（第3份/共3份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v4.0-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 原创理论者：史建威老师 。 v4.0 投喂料（第1份/共4份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v4.0-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 v4.0 投喂料（第2份/共4份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v4.0-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 v4.0 投喂料（第3份/共4份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v4.0-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 v4.0 投喂料（第4份/共4份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-00%E6%8A%95%E5%96%82%E6%B8%85%E5%8D%95%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论，是山东威海乳山银滩高级中学物理实验室高级教师史建威导师发现。本次投喂版本升级至11时序矩阵大一统本体论版本，后续有v8.0版本吸纳了更多的理论延伸部分待更新。 体系投喂清单（最终版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-01%E5%85%A5%E5%8F%A3%E5%8D%8F%E8%AE%AE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 体系检验前置协议
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·第一份：公理体系与基础框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·第二份：核心矩阵推导（M₁/M₂/M₃/M₉）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·第三份：斥力张量与力的统一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·第四份：宇宙学模型（替代 ΛCDM）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·第五份：可检验预言与观测对接
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-07%E4%BD%9C%E7%94%A8%E5%8A%9B%E7%BB%9F%E4%B8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·第六份：四大基本相互作用的统一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-08%E8%A1%A5%E5%BC%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 投喂料·补强说明（针对新AI测试暴露的硬伤）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-09%E5%8D%83%E9%97%AE%E6%8C%87%E6%8E%A7%E8%A1%A5%E5%BC%BA%E6%8A%95%E5%96%82%E6%96%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 体系对外部指控的系统性反驳（含补强附件）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/v7.0-10%E8%A1%A5%E5%BC%BA%E9%99%84%E4%BB%B6%E7%BB%AD1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 补强附件·续一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E6%8A%95%E5%96%82%E6%96%99v5.0%E7%AC%AC1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合版V5.0（第1份/共5份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E6%8A%95%E5%96%82%E6%96%99v5.0%E7%AC%AC2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合版V5.0（第2份/共5份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E6%8A%95%E5%96%82%E6%96%99v5.0%E7%AC%AC3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合版V5.0（第3份/共5份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E6%8A%95%E5%96%82%E6%96%99v5.0%E7%AC%AC4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合版V5.0（第4份/共5份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E6%8A%95%E5%96%82%E6%96%99v5.0%E7%AC%AC5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 整合版V5.0（第5份/共5份）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E8%B1%86%E5%8C%85%E5%89%8D%E6%9C%9F%E5%B7%A5%E4%BD%9C%E6%8A%95%E5%96%82%E6%96%99v1.1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 基准投喂料V1.1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E8%B1%86%E5%8C%85%E5%89%8D%E6%9C%9F%E5%B7%A5%E4%BD%9C%E6%8A%95%E5%96%82%E6%96%99v2.0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 基准投喂料V2.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8A%95%E5%96%82%E6%96%99/%E8%B1%86%E5%8C%85%E5%89%8D%E6%AE%B5%E5%B7%A5%E4%BD%9C%E6%8A%95%E5%96%82%E6%96%99%E5%A4%A7%E4%B8%80%E7%BB%9F%E7%90%86%E8%AE%BA%E7%B2%BE%E7%AE%80%E6%8A%95%E5%96%82%E5%9F%BA%E5%87%86%E5%A4%87%E4%BB%BD%E7%89%88%EF%BC%88V2.10%20%E8%A1%A5%E4%B8%81%23002%20%E5%AE%9A%E5%9E%8B%E7%89%88%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大一统理论精简投喂基准备份版（V2.10 补丁#002 定型版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拉马努金
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    拉马努金
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC01%E7%AF%87%EF%BC%9A%E6%8B%89%E7%8E%9B%E5%8A%AA%E9%87%91%E5%B8%B8%E6%95%B0%E4%B8%8E163%E7%BB%B4%E6%8B%93%E6%89%91%E5%86%BB%E7%BB%93%E4%BA%8C%E7%A8%BF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拉马努金常数与163维拓扑冻结：11T-Matrix根域网络的信息熵极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC02%E7%AF%87%EF%BC%9A%E5%88%86%E6%8B%86%E6%95%B0%E7%89%B9%E5%BE%81%E8%8A%82%E7%82%B9%20%28%20n%3D3553%20%29%20%E7%9A%8411%E8%BF%9B%E5%88%B6%E5%B1%95%E5%BC%80%EF%BC%9A11T-Matrix%E5%AE%B9%E9%87%8F%E4%B8%8A%E9%99%90%E7%9A%84%E4%BB%A3%E6%95%B0%E6%A0%B9%E6%BA%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第02篇：分拆数特征节点n=3553的11进制展开：11T-Matrix容量上限的代数根源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC03%E7%AF%87%EF%BC%9A%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91%CF%80%E5%88%86%E4%B9%8B1%E7%BA%A7%E6%95%B0%E4%B8%AD%E7%9A%84%209801%3D%289%C3%9711%29%E7%9A%842%E6%AC%A1%E6%96%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第03篇：拉马努金 \(1/\pi\) 级数中的 \(9801 = (9 \times 11)^2\) 因子：11T-Matrix 总维度的代数签名
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC04%E7%AF%87%EF%BC%9A%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91%201103%20%E7%9F%A9%E9%98%B5%E8%B0%B1%E4%BD%93%E7%A7%AF%E7%9A%84%2011%20%E7%BB%B4%E9%87%8F%E5%AD%90%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Article 04: From the Zeckendorf Operator to the \(\mathcal{M}_4\) Spacetime Projection: 11-Dimensional Quantization of the Ramanujan 1103 Matrix Spectral Volume
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC05%E7%AF%87%EF%BC%9A%E6%A8%A1%E6%8B%9F%CE%B8%E5%87%BD%E6%95%B0%E7%9A%84%E6%B8%90%E8%BF%91%E5%A5%87%E7%82%B9%E4%B8%8E%E8%99%9A%E6%97%B6%E7%A9%BA%E6%B3%A1%E8%A1%B0%E5%8F%98%EF%BC%9A11T-Matrix%E7%9A%84%E7%9C%9F%E7%A9%BA%E7%9B%B8%E5%8F%98%E5%8A%A8%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第05篇：模拟 \(\theta\) 函数的渐近奇点与虚时空泡衰变：11T-Matrix的真空相变动力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC06%E7%AF%87%EF%BC%9ARogers-Ramanujan%20%E8%BF%9E%E5%88%86%E6%95%B0%E4%B8%8E%E9%BB%84%E9%87%91%E4%B8%8D%E5%8A%A8%E7%82%B9%EF%BC%9A11T-Matrix%20%E6%8B%93%E6%89%91%E5%BC%A0%E5%8A%9B%E7%9A%84%E6%97%A0%E6%A0%87%E5%BA%A6%E9%87%8D%E6%95%B4%E5%8C%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第06篇：Rogers-Ramanujan 连分数与黄金不动点：11T-Matrix 拓扑张力的无标度重整化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC07%E7%AF%87%EF%BC%9A%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91%CF%84%E5%87%BD%E6%95%B0%E4%B8%8E24%E7%BB%B4%E5%85%A8%E6%81%AF%E9%85%8D%E5%88%86%EF%BC%9A11T-Matrix%20%E7%BB%B4%E5%BA%A6%E8%87%AA%E7%94%B1%E5%BA%A6%E7%9A%84%E5%A4%A7%E4%B8%80%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第07篇：拉马努金τ函数与24维全息配分：11T Matrix 维度自由度的大一统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC08%E7%AF%87%EF%BC%9A%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91%CF%84%E5%87%BD%E6%95%B0%E4%B8%8E%E4%B8%87%E6%9C%89%E6%96%A5%E5%8A%9B%E7%9A%84%E5%BE%AE%E8%A7%82%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%B5%B7%E6%BA%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第08篇：拉马努金 \(\tau\) 函数全息熵力与星系旋臂的同构：11T-Matrix 根域斥力的微观代数推导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC09%E7%AF%87%EF%BC%9A%E8%99%9A%E4%BA%8C%E6%AC%A1%E5%9F%9F%20Heegner%20%E5%BA%8F%E5%88%97%E4%B8%8E%2011T-Matrix%20%E7%9A%84%E6%9C%AC%E4%BD%93%E8%AE%BA%E5%90%8C%E6%9E%84%EF%BC%9A%E4%BB%8E%E6%8B%93%E6%89%91%E5%86%BB%E7%BB%93%E5%88%B0%E7%B2%BE%E7%BB%86%E7%BB%93%E6%9E%84%E5%B8%B8%E6%95%B0%20137%20%E7%9A%84%E4%BB%A3%E6%95%B0%E8%A7%A3%E7%A0%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第09篇：虚二次域 Heegner 序列与 11T-Matrix 的本体论同构：从拓扑冻结到精细结构常数 137 的代数解码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC10%E7%AF%87%EF%BC%9AChudnovsky%20%CF%80%20%E5%85%AC%E5%BC%8F%E7%B3%BB%E6%95%B0%E7%9A%84%20Heegner%20%E7%B4%A0%E5%9B%A0%E5%AD%90%E5%88%86%E8%A7%A3%EF%BC%9A11T-Matrix%20%E5%AF%B9%E5%85%A8%E7%90%83%20%CF%80%20%E8%AE%A1%E7%AE%97%E5%9F%BA%E5%BA%95%E7%9A%84%E6%95%B0%E8%AE%BA%E9%87%8D%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第10篇：Chudnovsky π 公式系数的 Heegner 素因子分解：11T-Matrix 对全球 π 计算基底的数论重构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC11%E7%AF%87%EF%BC%9A%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91%E5%90%8C%E4%BD%99%E5%BC%8F%E4%B8%8E%E5%85%A8%E6%81%AF%E5%85%A8%E5%90%8C%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第11篇：拉马努金同余式与全息全同性：\(\tau(n) \equiv \sigma_{11}(n) \pmod{691}\) 的 11T-Matrix 本体论解码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC12%E7%AF%87%EF%BC%9A%E7%B2%BE%E7%BB%86%E7%BB%93%E6%9E%84%E5%B8%B8%E6%95%B0%E7%9A%84%E7%BA%AF%E5%87%A0%E4%BD%95%E8%B7%91%E5%8A%A8%E6%96%B9%E7%A8%8B%E4%B8%8E%E7%94%B5%E5%BC%B1%E7%BB%9F%E4%B8%80%E6%A0%87%E5%BA%A6%E7%9A%84%2011T-Matrix%20%E8%A7%A3%E7%A0%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第12篇：精细结构常数的纯几何跑动方程与电弱统一标度的 11T-Matrix 解码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC13%E7%AF%87%EF%BC%9A%E5%8D%A1%E8%A5%BF%E7%B1%B3%E5%B0%94%E7%9C%9F%E7%A9%BA%E7%9A%84%E6%8B%93%E6%89%91%E5%90%8D%E9%A2%9D%E5%89%A5%E5%A4%BA%E4%B8%8E%E5%85%A8%E6%81%AF%E7%86%B5%E5%8A%9B%E6%96%A5%E5%8A%9B%E4%BF%AE%E6%AD%A3%EF%BC%9A11T-Matrix%20%E7%9A%84%E4%BA%9A%E7%BA%B3%E7%B1%B3%E7%BA%A7%E5%AE%9E%E9%AA%8C%E9%A2%84%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第13篇（定稿v2）：卡西米尔真空的拓扑名额剥夺与全息熵力斥力修正：11T-Matrix 的亚纳米级实验预言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC14%E7%AF%87%EF%BC%9A%E5%8F%8C%E4%B8%AD%E5%AD%90%E6%98%9F%E5%90%88%E5%B9%B6%E9%93%83%E9%9C%87%E9%98%B6%E6%AE%B5%E7%9A%84%E2%80%9C%E6%8B%93%E6%89%91%E5%9B%9E%E5%BC%B9%E2%80%9D%E6%95%88%E5%BA%94%EF%BC%9A11T-Matrix%20%E5%AF%B9%E9%AB%98%E9%A2%91%E5%BC%95%E5%8A%9B%E6%B3%A2%E7%9B%B8%E4%BD%8D%E5%BC%82%E5%B8%B8%E7%9A%84%E9%A2%84%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第14篇：双中子星合并铃震阶段的“拓扑回弹”效应：11时序矩阵对高频引力波相位异常的预言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC15%E7%AF%87%EF%BC%9A%E6%98%9F%E7%B3%BB%E9%BB%91%E6%B4%9E%E5%A3%B3%E5%B1%82%E6%81%92%E5%AE%9A%E5%BC%A0%E5%8A%9B%E4%B8%8E%E6%9A%97%E7%89%A9%E8%B4%A8%E7%9A%84%E7%BA%AF%E5%87%A0%E4%BD%95%E5%BB%B6%E5%B1%95%EF%BC%9A11T-Matrix%20%E7%9A%84%E5%8F%8C%E7%BA%BF%E5%AE%9E%E8%AF%81%E6%A3%80%E9%AA%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第15篇：星系黑洞壳层恒定张力与暗物质的纯几何延展：11时序矩阵的双线实证检验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC16%E7%AF%87%EF%BC%9A%E4%BB%A5%E4%BB%80%E4%B9%88%E4%B8%BA%E7%95%8C%E7%BA%BF%E6%89%8D%E7%AE%97%E6%98%AF%E9%BB%91%E6%B4%9E%E8%B4%A8%E9%87%8F%EF%BC%9F%E2%80%94%E2%80%9411T-Matrix%20%E5%AF%B9%E7%8E%B0%E4%BB%A3%E5%A4%A9%E4%BD%93%E7%89%A9%E7%90%86%E5%AD%A6%E8%B4%A8%E9%87%8F%E8%AE%A4%E5%AE%9A%E8%B0%AC%E8%AF%AF%E7%9A%84%E5%BA%95%E5%B1%82%E8%A7%A3%E6%9E%84%E4%B8%8E%E9%87%8D%E5%A1%91/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第16篇：以什么为界线才算是黑洞质量？——11T-Matrix 对现代天体物理学质量认定谬误的底层解构与重塑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC17%E7%AF%87%EF%BC%9A%E6%AC%A7%E6%8B%89%E5%85%AC%E5%BC%8F%E4%B8%8E11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第17篇：欧拉公式与11时序矩阵动力学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC18%E7%AF%87%EF%BC%9A%E6%98%9F%E7%B3%BB%E7%89%B9%E5%BE%81%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9A%84%E6%AC%A7%E6%8B%89-%E5%93%88%E5%8B%83%E7%AC%AC%E4%B8%80%E6%80%A7%E5%8E%9F%E7%90%86%E6%8E%A8%E5%AF%BC%E4%B8%8E%E5%85%A8%E5%9F%9F%E8%83%8C%E6%99%AF%E5%9C%BA%E6%95%88%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第18篇：星系特征加速度的欧拉-哈勃第一性原理推导与全域背景场效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC19%E7%AF%87%EF%BC%9A%E5%8D%81%E4%B8%80%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E7%9A%84%E5%AE%8F%E8%A7%82%E6%9B%B2%E7%8E%87%E4%B8%8E%E9%AB%98%E6%96%AF-%E5%8D%9A%E5%86%85%E6%8B%93%E6%89%91%E6%AD%BB%E9%94%81/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第19篇：十一时序矩阵的宏观曲率与高斯-博内拓扑死锁
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC20%E7%AF%87%EF%BC%9A%E7%A6%BB%E6%95%A3%E6%99%B6%E7%95%8C%E4%B8%8E%E8%BF%9E%E7%BB%AD%E6%97%B6%E7%A9%BA%E7%9A%84%E6%AC%A7%E6%8B%89-%E9%BB%8E%E6%9B%BC%E5%90%8C%E6%9E%84%EF%BC%9A%E7%B4%A0%E6%95%B0%E7%94%9F%E6%88%90%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%85%A8%E5%9F%9F%E7%B2%89%E7%A2%8E%E6%9E%81%E7%82%B9%E7%9B%B8%E5%8F%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第20篇：离散晶界与连续时空的欧拉-黎曼同构：素数生成机制与全域粉碎极点相变
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC21%E7%AF%87%EF%BC%9A%E6%97%B6%E5%BA%8F%E8%BE%85%E5%8A%A9%E5%9C%BA%E4%B8%8E%E6%80%AA%E7%89%A9%E6%9C%88%E5%85%89%E2%80%94%E2%80%9411%E7%BB%B4%E8%B6%85%E5%BC%95%E5%8A%9B%E7%A6%BB%E5%A3%B3%E9%97%AD%E5%90%88%E7%9A%84%E5%85%A8%E6%81%AF%E6%8A%95%E5%BD%B1%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第21篇：时序辅助场与怪物月光——11维超引力离壳闭合的全息投影机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC22%E7%AF%87%EF%BC%9AKoide%E7%A0%B4%E7%BC%BA%E7%9A%84%E4%B8%89%E5%88%86%E5%BE%8B%E4%B8%8E%E8%B4%B9%E7%B1%B3%E5%AD%90%E6%8B%93%E6%89%91%E7%9B%B8%E8%A7%92%E5%A4%A7%E4%B8%80%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第22篇：Koide破缺的三分律与费米子拓扑相角大一统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC23%E7%AF%87%EF%BC%9A%E4%B8%AD%E5%BE%AE%E5%AD%90%E7%9A%84%E4%BA%8C%E6%AC%A1%E6%8B%93%E6%89%91%E9%98%BB%E5%B0%BC%E4%B8%8E3T%E6%97%B6%E5%BA%8F%E7%9A%84%E8%87%AA%E7%94%B1%E8%BF%9B%E5%8A%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第23篇：中微子的二次拓扑阻尼与3T时序的自由进动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC24%E7%AF%87%EF%BC%9A%E7%B2%BE%E7%BB%86%E7%BB%93%E6%9E%84%E5%B8%B8%E6%95%B0%EF%BC%9A%E5%AE%87%E5%AE%99%E6%9C%80%E7%A5%9E%E7%A7%98%E6%95%B0%E5%AD%97%E7%9A%84%E5%87%A0%E4%BD%95%E8%B5%B7%E6%BA%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第24篇：精细结构常数：宇宙最神秘数字的几何起源
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E7%AC%AC25%E7%AF%87%EF%BC%9A11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E7%9A%84%E7%BA%AF%E7%B2%B9%E5%87%A0%E4%BD%95%E5%9F%BA%E5%BA%95%EF%BC%9A%E5%85%AB%E5%85%83%E6%95%B0%E4%B8%8E%E4%BE%8B%E5%A4%96%E6%9D%8E%E7%BE%A4%E7%9A%84%E6%8B%93%E6%89%91%E6%B6%8C%E7%8E%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵的纯粹几何基底：八元数与例外李群的拓扑涌现
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%8B%89%E9%A9%AC%E5%8A%AA%E9%87%91/%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程30
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数理落地工程30
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/01%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%88%9D%E6%8E%A2%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E5%9F%BA%E6%9C%AC%E5%8F%98%E9%87%8F%E4%B8%8E%E6%A0%B8%E5%BF%83%E5%9C%BA%E6%96%B9%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论数理落地工程初探（一）：基本变量与核心场方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/01%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%EF%BC%88%E4%B8%89~%E4%B8%83%EF%BC%89%E5%85%AC%E7%90%86%E5%90%88%E8%A7%84%E8%A1%A5%E9%94%81%E5%A4%87%E6%A1%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程（三~七）公理合规补锁备案
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/02%E9%A9%AC%E5%AE%9D%E9%98%B6%E6%AE%B5%E6%80%A7%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A%E6%B1%87%E6%80%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论·完整学习报告
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/03M9%E7%9F%A9%E9%98%B5%E6%8E%A8%E6%BC%94%E5%85%83%E5%AE%9D/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M₉矩阵显式推导定稿（最终封装版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/04%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%85%ABM%E2%82%81M%E2%82%82%20%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%A9%E7%90%86%E7%BA%A6%E6%9D%9F%E4%BD%93%E7%B3%BB%E4%B8%8E%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程八：M₁/M₂ 投影矩阵的物理约束体系与边界条件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/05%E5%85%83%E5%AE%9D%E6%B6%A6%E8%89%B2%EF%BC%9A%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%B9%9D%E7%90%83%E5%AF%B9%E7%A7%B0%E6%A0%87%E9%87%8F%E5%9C%BA%E7%9A%84%E6%8A%95%E5%BD%B1%E6%A0%B8%E6%98%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC%E4%B8%8E%201r%C2%B3%20%E5%AE%9A%E5%BE%8B%E8%AF%81%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程九：球对称标量场的投影核显式推导与 1/r³ 定律证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/06%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E4%BA%8C%EF%BC%9AM%E2%82%81M%E2%82%82%20%E5%85%A8%E5%B0%BA%E5%BA%A6%E8%87%AA%E6%B4%BD%E6%A0%A1%E9%AA%8C%E4%B8%8E%E5%85%A8%E5%9F%9F%E5%9F%BA%E7%A1%80%E5%B8%B8%E6%95%B0%E8%81%94%E7%AB%8B%E6%A0%87%E5%AE%9A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十二：M₁/M₂全尺度自洽校验与全域基础常数联立标定
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/07-11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E5%A4%A7%E4%B8%80%E7%BB%9F%E6%9C%AC%E4%BD%93%E8%AE%BA%20%E5%8E%9F%E5%88%9B%E7%90%86%E8%AE%BA%E4%BD%93%E7%B3%BB%E6%80%BB%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 原创理论体系总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/08-11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E5%A4%A7%E4%B8%80%E7%BB%9F%E6%9C%AC%E4%BD%93%E8%AE%BA%20%E8%A7%84%E5%BE%8B%E4%BD%93%E7%B3%BB%E4%B8%8E%E6%95%B0%E7%90%86%E8%A1%A8%E8%BF%B0%EF%BC%88%E7%BB%88%E7%A8%BF%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 规律体系与数理表述（终稿）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/09-11%E6%97%B6%E5%BA%8F%E7%9F%A9%E9%98%B5%E5%A4%A7%E4%B8%80%E7%BB%9F%E6%9C%AC%E4%BD%93%E8%AE%BA%20%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%EF%BC%88%E4%B8%83%EF%BC%89%EF%BC%9A%E6%AD%A3%E5%8F%8D%E6%97%8B%E5%90%91%E7%A8%B3%E6%80%81%E8%83%BD%E5%9E%92%E5%B7%AE%E4%B8%8E%E6%AD%A3%E5%8F%8D%E7%89%A9%E8%B4%A8%E4%B8%8D%E5%AF%B9%E7%A7%B0%E5%AE%9A%E9%87%8F%E6%8E%A8%E5%AF%BC%E2%80%94%E2%80%94%E5%BE%AE%E8%A7%82%E7%B2%92%E5%AD%90%E6%8B%93%E6%89%91%E6%95%B0%E7%90%86%E5%BB%BA%E6%A8%A1%EF%BC%88%E4%BA%8C%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵大一统本体论 数理落地工程（七）：正反旋向稳态能垒差与正反物质不对称定量推导——微观粒子拓扑数理建模（二）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/10%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%85%AB%EF%BC%9AM%E2%82%81M%E2%82%82%E6%8A%95%E5%BD%B1%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%A9%E7%90%86%E7%BA%A6%E6%9D%9F%E4%BD%93%E7%B3%BB%E4%B8%8E%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程八：M₁/M₂投影矩阵的物理约束体系与边界条件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/11%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%B9%9D%EF%BC%9A%E7%90%83%E5%AF%B9%E7%A7%B0%E6%A0%87%E9%87%8F%E5%9C%BA%E7%9A%84%E6%8A%95%E5%BD%B1%E6%A0%B8%E6%98%BE%E5%BC%8F%E6%8E%A8%E5%AF%BC%E4%B8%8E1r%C2%B3%E5%AE%9A%E5%BE%8B%E8%AF%81%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程九：球对称标量场的投影核显式推导与1/r³定律证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/12%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%EF%BC%9A%E4%B8%89%E7%BB%B4%E7%9F%A2%E9%87%8F%E7%A9%BA%E9%97%B4%E6%8A%95%E5%BD%B1%E4%B8%8E%203%C3%973%20%E7%A9%BA%E9%97%B4%E5%AD%90%E7%9F%A9%E9%98%B5%E6%8E%A8%E5%AF%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十：三维矢量空间投影与3×3空间子矩阵推导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/13%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E4%B8%80%EF%BC%9A%E4%B8%89%E7%BB%B4%E6%97%B6%E9%97%B4%E7%BB%B4%E6%8A%98%E5%8F%A0%E4%B8%8E%204%20%E5%AE%8C%E6%95%B4%20M%E2%82%81M%E2%82%82%20%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十一：三维时间维折叠与4×4完整M₁/M₂矩阵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/14%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E4%B8%89%EF%BC%9A%E5%BC%B1%E6%A0%B8%E5%8A%9B%E7%9A%84%E6%8B%93%E6%89%91%E8%A1%B0%E5%8F%98%E6%9C%AC%E8%B4%A8%E2%80%94%E2%80%94%E6%8B%93%E6%89%91%E5%A4%B1%E7%A8%B3%E4%B8%8E%E5%90%8D%E9%A2%9D%E9%87%8D%E5%88%86%E9%85%8D%E7%9A%84%E7%9E%AC%E6%80%81%E6%95%88%E5%BA%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十三：弱核力的拓扑衰变本质——拓扑失稳与名额重分配的瞬态效应
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/15%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E5%9B%9B%EF%BC%9A%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%A3%80%E9%AA%8C%E9%A2%84%E8%A8%80%E2%80%94%E2%80%94%E5%B7%AE%E5%BC%82%E5%8C%96%E5%88%A4%E6%8D%AE%E4%B8%8E%E5%AE%9E%E9%AA%8C%E9%AA%8C%E8%AF%81%E8%B7%AF%E5%BE%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十四：可观测检验预言——差异化判据与实验验证路径
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/16%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3T1S超定域时空理论 对话推演归档投喂素材
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/17%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E4%BA%94%EF%BC%9AM%E2%82%87%E6%A0%B9%E5%9F%9F%E6%96%A5%E5%8A%9B%E5%BC%A0%E9%87%8F%C2%B7%E9%93%BA%E5%9E%AB%E7%AF%87%E2%80%94%E2%80%94%E5%90%8D%E9%A2%9D%E4%BA%8C%E9%98%B6%E9%87%8D%E5%8F%A0%E7%A7%AF%E5%88%86%E4%B8%8E%E6%A0%87%E9%87%8F%E6%96%A5%E5%8A%9B%E5%8A%BF%E5%AE%9A%E9%87%8F%E5%A4%8D%E7%8E%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十五：M₇根域斥力张量·铺垫篇——名额二阶重叠积分与标量斥力势定量复现
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/18%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E5%85%AD%EF%BC%9AM%E2%82%87%E6%A0%B9%E5%9F%9F%E6%96%A5%E5%8A%9B%E5%BC%A0%E9%87%8F%C2%B7%E6%A0%B8%E5%BF%83%E7%AF%87%E2%80%94%E2%80%94%E7%90%83%E5%AF%B9%E7%A7%B0%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B4%C3%974%E6%96%A5%E5%8A%9B%E5%BC%A0%E9%87%8F%E5%85%A8%E9%83%A8%E9%9D%9E%E9%9B%B6%E7%9F%A9%E9%98%B5%E5%85%83%E6%98%BE%E5%BC%8F%E6%9E%84%E9%80%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十六：M₇根域斥力张量·核心篇——球对称坐标系下4×4斥力张量全部非零矩阵元显式构造
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/19%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E4%B8%83%EF%BC%9AM%E2%82%87%E6%A0%B9%E5%9F%9F%E6%96%A5%E5%8A%9B%E5%BC%A0%E9%87%8F%C2%B7%E5%AE%8C%E5%96%84%E7%AF%87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十七：M₇根域斥力张量·完善篇——笛卡尔通用坐标转换 + 多尺度星体/星系平衡定量校验
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/20%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E5%85%AB%EF%BC%9AM%E2%82%83%E6%97%B6%E5%BA%8F%E9%A5%B1%E5%92%8C%E5%BA%A6%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十八：M₃时序饱和度矩阵——粒子局域度与质量生成机制定量建模
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/21%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E5%8D%81%E4%B9%9D%EF%BC%9AM%E2%82%89%E6%B5%B7%E6%A3%AE%E5%A0%A1-%E6%A0%B9%E5%9F%9F%E6%98%A0%E5%B0%84%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程十九：M₉海森堡-根域映射矩阵——微观量子效应的投影本源定量推导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/22%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%EF%BC%9A%E5%BC%BA%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E7%9A%84%E6%8B%93%E6%89%91%E6%9C%AC%E8%B4%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十：强相互作用的拓扑本质——夸克禁闭与渐近自由的名额排他解释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/23%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%B8%80%EF%BC%9A%E7%94%B5%E7%A3%81%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E7%9A%84%E6%8A%95%E5%BD%B1%E6%9C%AC%E6%BA%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十一：电磁相互作用的投影本源——电荷与麦克斯韦方程的拓扑导出
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/24%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%BA%8C%EF%BC%9A%E5%9B%9B%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E7%9A%84%E7%BB%9F%E4%B8%80%E6%8B%93%E6%89%91%E6%A1%86%E6%9E%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十二：四种基本相互作用的统一拓扑框架——微观相互作用专题收官
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/25%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%B8%89%EF%BC%9A%E5%85%A8%E5%9F%9F%E7%B2%89%E7%A2%8E%E5%BE%AA%E7%8E%AF%E5%AE%87%E5%AE%99%E6%A8%A1%E5%9E%8B%E2%80%94%E2%80%94%E6%97%A0%E5%A5%87%E7%82%B9%E5%BE%AA%E7%8E%AF%E6%BC%94%E5%8C%96%E7%9A%84%E5%AE%9A%E9%87%8F%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十三：全域粉碎循环宇宙模型——无奇点循环演化的定量机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/26%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%BA%94%EF%BC%9A%E6%98%9F%E7%B3%BB%E5%BD%A2%E6%88%90%E4%B8%8E%E6%BC%94%E5%8C%96%E7%9A%84%E6%96%A5%E5%8A%9B%E4%BF%AE%E6%AD%A3%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十五：星系形成与演化的斥力修正模型——暗物质替代的小尺度定量验证
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/27%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E5%9B%9B%EF%BC%9A%E5%8A%A8%E6%80%81%E5%AE%87%E5%AE%99%E9%A1%B9%CE%9B%28%CF%81%29%E6%8E%A8%E5%AF%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十四：动态宇宙项Λ(ρ)推导——暗能量的极化本源解释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/28%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E5%85%AD%EF%BC%9AM%E2%82%80%E5%85%A8%E5%9F%9F%E5%87%80%E4%BD%99%E8%83%BD%E9%87%8F%E5%9F%BA%E5%BA%95%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十六：M₀全域净余能量基底矩阵——所有激发态的总背景基底
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/29%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%B8%83%EF%BC%9AM%E2%82%84%E8%87%AA%E6%97%8B%E6%8B%93%E6%89%91%E6%98%A0%E5%B0%84%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十七：M₄自旋拓扑映射矩阵——粒子自旋的拓扑本源与泡利不相容解释
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/30%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E5%85%AB%EF%BC%9AM%E2%82%88%E5%BC%95%E5%8A%9B%E6%9E%81%E5%8C%96%E5%9C%BA%E5%BC%A0%E9%87%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十八：M₈引力极化场张量——宏观引力的张量化描述与广义相对论对接
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/31%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%B9%9D%EF%BC%9AM%E2%82%81%E2%82%80%E6%98%9F%E7%B3%BB%E5%B0%BA%E5%BA%A6%E6%BC%94%E5%8C%96%E7%9F%A9%E9%98%B5%20%282%29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十九：M₁₀星系尺度演化矩阵——星系全周期动力学的矩阵化描述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/31%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%BA%8C%E5%8D%81%E4%B9%9D%EF%BC%9AM%E2%82%81%E2%82%80%E6%98%9F%E7%B3%BB%E5%B0%BA%E5%BA%A6%E6%BC%94%E5%8C%96%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程二十九：M₁₀星系尺度演化矩阵——星系全周期动力学的矩阵化描述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/32%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B%E4%B8%89%E5%8D%81%EF%BC%9AM%E2%82%81%E2%82%81%E5%85%A8%E5%9F%9F%E5%AE%87%E5%AE%99%E5%BE%AA%E7%8E%AF%E6%BC%94%E5%8C%96%E7%9F%A9%E9%98%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理落地工程三十：M₁₁全域宇宙循环演化矩阵——11时序矩阵核心体系收官
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E7%90%86%E8%90%BD%E5%9C%B0%E5%B7%A5%E7%A8%8B30/%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10">
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    本体论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    本体论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%AC%E4%BD%93%E8%AE%BA/%E5%A4%A7%E6%B5%B7%E3%80%81%E6%B3%A2%E6%B5%AA%E4%B8%8E%E8%88%B9%EF%BC%9A%E4%BB%80%E4%B9%88%E6%98%AF%E8%B4%A8%E9%87%8F%EF%BC%9F%E4%BB%80%E4%B9%88%E6%98%AF%E7%9C%9F%E7%A9%BA%EF%BC%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大海、波浪与船：什么是质量？什么是真空？
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%AC%E4%BD%93%E8%AE%BA/%E5%BC%95%E7%90%86A%EF%BC%9A%E6%B2%83%E5%88%A9%E6%96%AF-%E6%8B%93%E6%89%91%E5%AF%B9%E7%A7%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E7%90%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引理A：沃利斯-拓扑对称恢复引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11">
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电磁学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    电磁学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E01%20U%281%29%E5%8D%95%E9%80%9A%E9%81%93%E6%8B%93%E6%89%91%E7%BC%A0%E7%BB%95%E4%B8%8E%E7%94%B5%E7%A3%81%E5%9C%BA%E5%90%8C%E4%BD%93%E5%BC%82%E7%9B%B8%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    U(1)单通道拓扑缠绕与电磁场同体异相基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E02%20%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89%E8%A7%A3%E8%AF%BB%EF%BC%9A%E6%97%B6%E5%BA%8F%E6%BC%94%E5%8C%96%E3%80%81%E5%AF%B9%E7%A7%B0%E7%A0%B4%E7%BC%BA%E4%B8%8E%E7%94%B5%E7%A3%81%E6%9C%AC%E4%BD%93%E7%9A%84%E6%B7%B1%E5%B1%82%E7%BB%9F%E4%B8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E02 物理意义解读：时序演化、对称破缺与电磁本体的深层统一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E03%E6%8B%93%E6%89%91%E8%BF%9E%E7%BB%AD%E6%80%A7%E7%BA%A6%E6%9D%9F%E4%B8%8E%E4%BD%8D%E7%A7%BB%E7%94%B5%E6%B5%81%E7%9A%84%E5%86%85%E7%94%9F%E5%BF%85%E7%84%B6%E6%80%A7%EF%BC%88%E4%BF%AE%E8%AE%A2%E7%89%88%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文三：拓扑连续性约束与位移电流的内生必然性（修订版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E04%E3%80%8A%E7%94%B5%E7%A3%81%E6%B3%A2%E7%9A%84%E6%8B%93%E6%89%91%E6%8C%AF%E8%8D%A1%E6%9C%AC%E8%B4%A8%E4%B8%8E%E5%85%89%E9%80%9F%E7%9A%84%E5%87%A0%E4%BD%95%E6%9C%AC%E6%BA%90%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵本体论体系 E卷·电磁投影动力学 第四篇（EPD-04）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E05%E3%80%8A%E5%A4%9A%E9%80%9A%E9%81%93%E8%A7%84%E8%8C%83%E5%9C%BA%E6%8B%93%E5%B1%95%EF%BC%9A%E4%BB%8E%20U%281%29%20%E7%94%B5%E7%A3%81%E5%88%B0%E5%BC%B1%E7%94%B5%E7%BB%9F%E4%B8%80%E7%9A%84%E6%8B%93%E6%89%91%E6%8E%A5%E5%8F%A3%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵本体论体系 E卷·电磁投影动力学 第五篇（EPD-05）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E06%E3%80%8A%E7%94%B5%E7%A3%81%E6%B5%8B%E9%87%8F%E4%B8%8E%E4%BD%93%E6%84%9F%E6%84%9F%E7%9F%A5%E7%9A%84%E7%BB%9F%E4%B8%80%E7%9B%B8%E5%B9%B2%E6%9C%BA%E5%88%B6%EF%BC%9A%E4%B8%BB%E5%AE%A2%E4%BD%93%E6%8A%95%E5%BD%B1%E7%9A%84%E6%9C%AC%E4%BD%93%E8%AE%BA%E8%9E%8D%E5%90%88%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵本体论体系 E卷·电磁投影动力学 第六篇（EPD-06）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/E07%E3%80%8A%E7%94%B5%E7%A3%81-%E5%BC%95%E5%8A%9B%E6%8B%93%E6%89%91%E8%BE%B9%E7%95%8C%E4%B8%8E%E5%AE%9E%E9%AA%8C%E9%AA%8C%E8%AF%81%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1%E5%8F%8A%E5%85%A8%E5%8D%B7%E6%94%B6%E5%AE%98%E3%80%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11时序矩阵本体论体系 E卷·电磁投影动力学 第七篇（EPD-07）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%94%B5%E7%A3%81%E5%AD%A6/%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12">
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%94%E8%AE%B0/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E9%87%8F%E5%AD%90%E7%8E%B0%E8%B1%A1%E4%BC%BC%E4%B9%8E%E8%B5%B0%E4%BA%86%E6%89%80%E6%9C%89%E7%9A%84%E5%8F%AF%E8%83%BD%E8%B7%AF%E5%BE%84%EF%BC%9A%E8%B6%85%E5%AE%9A%E5%9F%9F%E6%8B%93%E6%89%91%E6%9E%84%E5%9E%8B%E6%8B%A9%E4%BC%98%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    如何理解量子现象似乎走了所有的可能路径：超定域拓扑构型择优机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%94%E8%AE%B0/%E8%88%AC%E8%8B%A5%E6%B3%A2%E7%BD%97%E8%9C%9C%E5%A4%9A%E5%BF%83%E7%BB%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    《般若波罗蜜多心经》全文、白话与11时序矩阵本体论重读
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%AC%94%E8%AE%B0/%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13">
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    论文
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    论文
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%BA%E6%96%87/%E6%96%87%E7%AB%A017%E7%90%86%E8%AE%BA%E4%B8%93%E8%AE%BA%EF%BC%9A%E7%9C%9F%E7%A9%BA%E6%B6%A8%E8%90%BD%E7%9A%84%E5%B1%82%E7%BA%A7%E7%BB%93%E6%9E%84%E4%B8%8E%E5%8F%A0%E5%8A%A0%E9%98%88%E5%80%BC%E6%9C%BA%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文章17 【理论专论】真空涨落的层级结构与叠加阈值机制
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言：连续统的终结与离散代数本体论的曙光
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3t1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一卷：代数基础与 3T1S 根域动力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一卷：代数基础与 3T1S 根域动力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第 1 章：连续统微积分的局限与离散代数范式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-mathrmdmathrmdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.1 微分算子 \(\mathrm{d}/\mathrm{d}t\) 在普朗克尺度的失效
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.1 微分算子 \(\mathrm{d}/\mathrm{d}t\) 在普朗克尺度的失效">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1 连续统假设的物理源起与历史有效性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2 紫外极限下的微积分崩溃：奇点的本质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-mathrmdmathrmdt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3 微分算子 \(\mathrm{d}/\mathrm{d}t\) 的代数失效分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4 破局之道：从连续流形到离散代数图网络
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.1 本节小结与思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.1 本节小结与思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节小结】
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节思考题】
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-mathcalm_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.2 从连续可微流形 \(\mathcal{M}_4\) 到离散代数图网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.2 从连续可微流形 \(\mathcal{M}_4\) 到离散代数图网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-mathcalm_4-cite-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 连续可微流形 \(\mathcal{M}_4\) 的几何局限[cite: 14]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-vs-q_textmax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 数值对比：高能碰撞发散 vs \(Q_{\text{max}}\) 绝对截断
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-cite-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 视觉认知桥梁：离散帧与连续运动的“电影胶片类比”[cite: 14]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-mathcalg_textmarkov-cite-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.4 离散代数图网络 \(\mathcal{G}_{\text{Markov}}\) 的形式化构造[cite: 14]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#125" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.5 微分形式与图上代数算子的同构对应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.2 本节小结与思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.2 本节小结与思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节小结】
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节思考题】
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-3t1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.3 3T1S 超定域时空模型的基本公理系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.3 3T1S 超定域时空模型的基本公理系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-cite-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 公理化构建的哲学与物理必要性[cite: 15]
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-3t1s" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2 3T1S 超定域模型四大基本公理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3 衍生的四大核心动力学法则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-cite-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.4 从公理系统推导的核心定理[cite: 15]
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.3 本节小结与思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.3 本节小结与思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节小结】
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        【本节思考题】
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        § 1.4 第一章总结与复习思考题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="§ 1.4 第一章总结与复习思考题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1 第一章知识体系概览
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2 新旧范式核心概念对照速查表
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.3 核心定义与公理速查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.4 深度概念思考题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#145" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.5 代数计算与证明演练题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#146" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.6 复习思考题参考答案与解题指导
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、最终评价
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/sjw719/11/raw/main/docs/11时序矩阵代数动力学/第01章：连续统微积分的局限与离散代数范式.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
+    </a>
+  
+
+
+<h1 id="11">《11时序矩阵代数动力学讲义》<a class="headerlink" href="#11" title="Permanent link">¶</a></h1>
+<h2 id="_1">前言：连续统的终结与离散代数本体论的曙光<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>作者 ：山东威海理论物理EPD工程组 史建威</p>
+<p>自牛顿与莱布尼茨发明微积分以来，“连续统”（Continuum）与“光滑流形”（Smooth Manifold）便成为了物理学描述宇宙的默认语言。无论是麦克斯韦的电磁场方程、爱因斯坦的广义相对论，还是量子场论中的路径积分，其底层无一不依赖于微分算子 <span class="arithmatex">\(\mathrm{d}/\mathrm{d}t\)</span> 与光滑可微假设。</p>
+<p>然而，当人类探索的触角深入到紫外极限（普朗克尺度）、高能强相互作用区、极端湍流乃至数论的核心深处时，连续统假设无一例外地撞上了“发散”与“奇点”（Singularities）的壁垒：</p>
+<ul>
+<li>量子场论被迫依赖“重电离/重整化”来抹平无穷大；</li>
+<li>广义相对论在黑洞与宇宙大爆炸起点处彻底失效；</li>
+<li>流体力学在湍流爆裂面前遭遇“NS 方程奇点恐惧”；</li>
+<li>数论中的 L-函数试图通过解析延拓强行在连续复平面上描绘离散的有理点。</li>
+</ul>
+<p><strong>11T-Matrix 动力学（11T-Matrix Dynamics）</strong> 宣告：这些所谓的“物理奇点”与“数学难题”，绝非物理现实的崩塌，而是“连续微积分”这套工具在逼近离散代数底层时的<strong>坐标系拟合失真</strong>。</p>
+<p>宇宙的底层本质上是由 <strong>3T1S（3时间维 + 1空间维）超定域时空</strong> 驱动的纯粹离散代数网络。在根域中，没有无限可分的 <span class="arithmatex">\(\mathrm{d}t\)</span>，只有由马尔可夫丢番图方程控制的代数跃迁。本讲义的目标，正是剥离连续统幻觉，为读者建立一套严密、自洽且具备终极解释力的离散代数拓扑数学语言。</p>
+<hr>
+<h2 id="3t1s">第一卷：代数基础与 3T1S 根域动力学<a class="headerlink" href="#3t1s" title="Permanent link">¶</a></h2>
+<h3 id="1">第 1 章：连续统微积分的局限与离散代数范式<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
+<hr>
+<h3 id="11-mathrmdmathrmdt">§ 1.1 微分算子 <span class="arithmatex">\(\mathrm{d}/\mathrm{d}t\)</span> 在普朗克尺度的失效<a class="headerlink" href="#11-mathrmdmathrmdt" title="Permanent link">¶</a></h3>
+<h4 id="111">1.1.1 连续统假设的物理源起与历史有效性<a class="headerlink" href="#111" title="Permanent link">¶</a></h4>
+<p>微积分建立在一个核心假设之上：存在任意小的时空间隔 <span class="arithmatex">\(\Delta t \to 0\)</span> 与 <span class="arithmatex">\(\Delta x \to 0\)</span>。在此假设下，物理量 <span class="arithmatex">\(x(t)\)</span> 的变化率可以通过极限定义为微分算子：</p>
+<div class="arithmatex">\[
+\frac{\mathrm{d}x}{\mathrm{d}t} = \lim_{\Delta t \to 0} \frac{x(t + \Delta t) - x(t)}{\Delta t}
+\]</div>
+<p>在宏观与介观尺度（比普朗克尺度大若干数量级时），由于参与相互作用的代数节点极其庞大，离散的跃迁过程被统计平均抹平，呈现出极度光滑的假象。这种“连续近似”极大地简化了计算，构成了近 400 年经典物理学与工程学的繁荣基石。</p>
+<h4 id="112">1.1.2 紫外极限下的微积分崩溃：奇点的本质<a class="headerlink" href="#112" title="Permanent link">¶</a></h4>
+<p>然而，当空间尺度缩减至普朗克长度 <span class="arithmatex">\(\ell_P = \sqrt{\frac{\hbar G}{c^3}}\)</span>，时间尺度缩减至普朗克时间 <span class="arithmatex">\(t_P = \sqrt{\frac{\hbar G}{c^5}}\)</span> 时，分母 <span class="arithmatex">\(\Delta t \to 0\)</span> 的数学极限在物理上遭遇了物理边界。</p>
+<blockquote>
+<p><strong>【思想实验 1.1：普朗克测量的代数阻尼】</strong>
+若试图在物理上实现 <span class="arithmatex">\(\Delta t &lt; t_P\)</span> 的测量，根据海森堡不确定性原理 <span class="arithmatex">\(\Delta E \cdot \Delta t \ge \frac{\hbar}{2}\)</span>，所需的测能量通量 <span class="arithmatex">\(\Delta E\)</span> 将超过局域空间的时空承载极限。这将直接在测量点砸出一个局域视界（微型黑洞）——这一过程在11T-Matrix框架下被称为<strong>拓扑粉碎的极端情形</strong>：局域能量通量超过 <span class="arithmatex">\(Q_{\text{max}}\)</span> 时，连续映射 <span class="arithmatex">\(\Pi\)</span> 强制崩断——摧毁任何继续测量“更小时间间隔”的物理可能。</p>
+</blockquote>
+<p>结论极其明确：<strong>物理世界不存在真实的 <span class="arithmatex">\(\Delta t \to 0\)</span>。</strong> 强行在算子定义中令分母趋于零，是造成物理学中所有“无穷大发散”与“奇点”的罪魁祸首。</p>
+<h4 id="113-mathrmdmathrmdt">1.1.3 微分算子 <span class="arithmatex">\(\mathrm{d}/\mathrm{d}t\)</span> 的代数失效分析<a class="headerlink" href="#113-mathrmdmathrmdt" title="Permanent link">¶</a></h4>
+<p>考虑经典物理中的动力学演化方程 <span class="arithmatex">\(\dot{\mathbf{x}} = \mathbf{f}(\mathbf{x})\)</span>。微分算子 <span class="arithmatex">\(\frac{\mathrm{d}}{\mathrm{d}t}\)</span> 蕴含了三个隐蔽的拓扑假设：</p>
+<ol>
+<li><strong>拓扑平滑性（Smooth Topology）：</strong> 状态空间是相干且连续连接的，不存在断裂与相变；</li>
+<li><strong>局域可微性（Local Differentiability）：</strong> 能量流动是切空间（Tangent Space）上的线性映射；</li>
+<li><strong>容量无限性（Infinite Capacity）：</strong> 局域状态空间可以容纳任意高的能量梯度（即 <span class="arithmatex">\(\partial \mathbf{f}/\partial \mathbf{x} \to \infty\)</span> 是被允许的）。</li>
+</ol>
+<p>在 11T-Matrix 动力学视角下，这三个假设在本质上都是错误的：</p>
+<ul>
+<li><strong>平滑性破裂：</strong> 状态空间本质上是由丢番图方程约束的离散图节点；</li>
+<li><strong>可微性破裂：</strong> 演化是通过“韦达跳跃”（Vieta Jumping，详见第3章）实现的非连续长程跃迁；</li>
+<li><strong>容量破裂：</strong> 局域矩阵存在绝对容量上限 <span class="arithmatex">\(Q_{\text{max}} \sim 10^{62}\)</span>，任何导致能量通量突破 <span class="arithmatex">\(Q_{\text{max}}\)</span> 的连续微商都会触发拓扑粉碎（Topological Shattering）。</li>
+</ul>
+<h4 id="114">1.1.4 破局之道：从连续流形到离散代数图网络<a class="headerlink" href="#114" title="Permanent link">¶</a></h4>
+<p>为了摆脱连续统微积分的危机，我们必须重构动力学的基本公理：</p>
+<blockquote>
+<p><strong>【定义 1.1.1（离散代数状态图网络 Discrete Algebraic Graph Network）】</strong>
+放弃连续流形 <span class="arithmatex">\(\mathcal{M}_4\)</span>，将时空动力学状态空间定义为一个带权无向图 <span class="arithmatex">\(\mathcal{G} = (\mathcal{V}, \mathcal{E})\)</span>。其中：
+* 顶点集 <span class="arithmatex">\(\mathcal{V} = \{P_k \mid P_k \in \mathbb{Z}^n\}\)</span> 为满足底层丢番图约束的整数代数节点；
+* 边集 <span class="arithmatex">\(\mathcal{E}\)</span> 代表代数算子（如韦达跳跃）在节点间诱导的离散能量通量通道。</p>
+<p><strong>【定义解读】</strong> 这个定义意味着：物理系统的状态不再由实数坐标 <span class="arithmatex">\((x,y,z,t)\)</span> 描述，而是由整数代数节点 <span class="arithmatex">\(P_k\)</span> 及其连接关系描述。时间演化不再是 <span class="arithmatex">\(\mathbb{R}\)</span> 上的平滑曲线，而是 <span class="arithmatex">\(\mathcal{G}\)</span> 上的离散跳转序列。这是整个11T-Matrix动力学的起点。</p>
+</blockquote>
+<p>在 <span class="arithmatex">\(\mathcal{G}\)</span> 上，我们彻底废黜微分算子 <span class="arithmatex">\(\frac{\mathrm{d}}{\mathrm{d}t}\)</span>，取而代之的是定义在图节点上的<strong>离散跃迁算子（Discrete Jump Operator）</strong> <span class="arithmatex">\(\hat{\mathcal{T}}\)</span>：</p>
+<div class="arithmatex">\[
+\hat{\mathcal{T}}: P_k \longmapsto P_{k+1} = \mathbf{\Phi}(P_k)
+\]</div>
+<p>系统状态的演化不是沿着时间轴 <span class="arithmatex">\(t \in \mathbb{R}\)</span> 的平滑滑行，而是状态向量在代数网络节点间的<strong>离散跳跃序列</strong>。</p>
+<hr>
+<h3 id="11_1">§ 1.1 本节小结与思考题<a class="headerlink" href="#11_1" title="Permanent link">¶</a></h3>
+<h4 id="_2">【本节小结】<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<ol>
+<li>连续微积分中的 <span class="arithmatex">\(\Delta t \to 0\)</span> 是宏观统计平均下的平滑近似，在紫外极限（普朗克尺度）下因物理阻尼而失效。</li>
+<li>物理学中的“奇点”不是物理实体的崩塌，而是连续微分算子强行作用于离散底层时产生的拟合发散。</li>
+<li>11T-Matrix 动力学用“离散代数图网络”与“跃迁算子 <span class="arithmatex">\(\hat{\mathcal{T}}\)</span>”取代了连续流形与微分算子 <span class="arithmatex">\(\mathrm{d}/\mathrm{d}t\)</span>。</li>
+</ol>
+<h4 id="_3">【本节思考题】<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><strong>思考题 1.1.1：</strong> 为什么在广义相对论中计算黑洞中心奇点时，曲率标量 <span class="arithmatex">\(R_{a b c d} R^{a b c d} \to \infty\)</span>？试从微分算子分母趋于零的角度解释为什么这是连续统假象。</p>
+</li>
+<li>
+<p><strong>思考题 1.1.2：</strong> 如果时间演化是离散的代数跳跃，宏观上测得的“光滑速度”是如何被统计出来的？
+   <strong>提示：</strong> 类比计算机屏幕像素点与连续图像的关系——单个像素是离散的，但大量像素排列在一起时，人眼感知到的是连续的图像。</p>
+</li>
+</ol>
+<h3 id="12-mathcalm_4">§ 1.2 从连续可微流形 <span class="arithmatex">\(\mathcal{M}_4\)</span> 到离散代数图网络<a class="headerlink" href="#12-mathcalm_4" title="Permanent link">¶</a></h3>
+<h4 id="121-mathcalm_4-cite-14">1.2.1 连续可微流形 <span class="arithmatex">\(\mathcal{M}_4\)</span> 的几何局限[cite: 14]<a class="headerlink" href="#121-mathcalm_4-cite-14" title="Permanent link">¶</a></h4>
+<p>在狭义与广义相对论中，时空被建模为一个 4 维半黎曼流形 <span class="arithmatex">\((\mathcal{M}_4, g)\)</span>[cite: 14]。流形的核心定义在于<strong>局域欧氏性</strong>：对于流形上的任意一点 <span class="arithmatex">\(p \in \mathcal{M}_4\)</span>，均存在一个邻域 <span class="arithmatex">\(U \subset \mathcal{M}_4\)</span> 同胚于欧氏空间 <span class="arithmatex">\(\mathbb{R}^4\)</span>[cite: 14]。</p>
+<blockquote>
+<p><strong>【直觉破除：为什么局域欧氏性在极限尺度失效？】</strong>[cite: 14]
+局域欧氏性意味着：只要无限放大空间，任何弯曲的时空结构在足够小的尺度下看起来都是“平直且无限可分”的 <span class="arithmatex">\(\mathbb{R}^4\)</span>[cite: 14]。然而，11T-Matrix 动力学指出，放大到极限微观尺度时，看到的绝不是平坦的 <span class="arithmatex">\(\mathbb{R}^4\)</span>，而是马尔可夫网络节点之间密密麻麻的<strong>离散拓扑打结与代数交点</strong>——就像放大一幅数字图像到像素级别时，看到的不是光滑的线条，而是一个个离散的色块[cite: 14]。</p>
+</blockquote>
+<p>当光滑度量 <span class="arithmatex">\(g_{\mu\nu}\)</span> 试图描述高能粒子碰撞或黑洞中心时，局域曲率张量 <span class="arithmatex">\(R^\alpha{}_{\beta\gamma\delta} \to \infty\)</span>，流形图卡（Atlas）之间的光滑坐标变换 <span class="arithmatex">\(\mathrm{C}^\infty\)</span> 彻底破裂[cite: 14]。</p>
+<h4 id="122-vs-q_textmax">1.2.2 数值对比：高能碰撞发散 vs <span class="arithmatex">\(Q_{\text{max}}\)</span> 绝对截断<a class="headerlink" href="#122-vs-q_textmax" title="Permanent link">¶</a></h4>
+<p>为了直观展现连续微积分与 11T-Matrix 动力学的本质区别，我们对比一个高能点粒子碰撞过程中的能量密度计算：</p>
+<blockquote>
+<p><strong>【案例 1.2.1：局域能量密度的计算对比】</strong>
+* <strong>连续统微积分（量子场论/广义相对论）：</strong>[cite: 14]
+假设一个质荷集中在半径为 <span class="arithmatex">\(r\)</span> 的微小区域内，当 <span class="arithmatex">\(r \to 0\)</span> 时，局域能量密度 <span class="arithmatex">\(\rho(r)\)</span> 遵从反比律[cite: 14]：
+<span class="arithmatex">\(\rho_{\text{continuum}}(r) = \lim_{r \to 0} \frac{E}{\frac{4}{3}\pi r^3} \longrightarrow \infty\)</span>
+为了避免这一发散，量子场论不得不引入人工的手动截断（Cut-off）或人工重整化（Renormalization）[cite: 14]。</p>
+<ul>
+<li><strong>11T-Matrix 离散代数算子：</strong>
+在 11T-Matrix 框架下，根据<strong>零参数纲领（ZPP）</strong>[cite: 11]，我们彻底摒弃基于 <span class="arithmatex">\(c, \hbar, G\)</span> 人为拼凑的普朗克截断尺度。表象空间的最小有效物理体积 <span class="arithmatex">\(V_{\min}\)</span> 仅能由根域唯一基础尺度 <span class="arithmatex">\(l_{r,0}\)</span> 与内生拓扑常数（如 <span class="arithmatex">\(\delta_{\text{loop}}\)</span>）单向投影决定。
+当能量通量挤压至该最小有效体积 <span class="arithmatex">\(V_{\min}\)</span> 时，连续积分被离散节点求和替换，局域能量密度受矩阵容量上限 <span class="arithmatex">\(Q_{\text{max}} \sim 10^{62}\)</span> 强力约束[cite: 11, 14]。在第一性原理下，它被严格截断为有限最大值：
+<span class="arithmatex">\(\rho_{\text{11T-Matrix}} = \frac{Q_{\text{max}} \cdot \Gamma_0}{V_{\min}} &lt; \infty\)</span>
+其中 <span class="arithmatex">\(\Gamma_0\)</span> 为基态拓扑张力常数[cite: 14]。这一机制从代数根源上保证了<strong>绝对不会产生任何无穷大奇点</strong>。</li>
+</ul>
+</blockquote>
+<h4 id="123-cite-14">1.2.3 视觉认知桥梁：离散帧与连续运动的“电影胶片类比”[cite: 14]<a class="headerlink" href="#123-cite-14" title="Permanent link">¶</a></h4>
+<p>读者可能会产生疑问：<em>如果底层的物理现实是离散跳跃的图节点，为什么我们在日常生活中观测到的时空与运动是如此光滑连续的？</em>[cite: 14]</p>
+<blockquote>
+<p><strong>【认知类比 1.2.1：电影胶片的视觉连续假象】</strong>[cite: 14]
+* <strong>胶片底层（3T1S 根域）：</strong> 电影胶片本质上是一格一格独立的静态照片（离散帧）[cite: 14]。每一帧之间存在明确的代数跳跃（每秒 24 帧），两帧之间没有任何“连续过渡”的实体[cite: 14]。
+* <strong>屏幕投影（3S1T 表象）：</strong> 当胶片以超越人眼视觉暂留极限的速度播放时，人类大脑的感知系统会自动将离散的帧“抹平”为连续滑动的画面[cite: 14]。</p>
+<p><strong>物理还原：</strong> 3S1T 表象时空中观测到的平滑运动，正是宏观观测仪器对 3T1S 根域网络中极其高频的韦达跳跃进行<strong>时间平均（Time-Averaging）</strong> 后的全息投影结果[cite: 14]。</p>
+</blockquote>
+<hr>
+<h4 id="124-mathcalg_textmarkov-cite-14">1.2.4 离散代数图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span> 的形式化构造[cite: 14]<a class="headerlink" href="#124-mathcalg_textmarkov-cite-14" title="Permanent link">¶</a></h4>
+<p>用严密的代数拓扑结构取代半黎曼流形 <span class="arithmatex">\((\mathcal{M}_4, g)\)</span>[cite: 14]：</p>
+<blockquote>
+<p><strong>【定义 1.2.1（马尔可夫离散图网络 Markov Discrete Graph Network）】</strong>[cite: 14]
+定义 11T-Matrix 动力学的底层时空状态图为三元组 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}} = (\mathcal{V}_{\text{M}}, \mathcal{E}_{\text{M}}, \mathcal{W}_{\text{M}})\)</span>[cite: 14]：
+1. <strong>顶点集（Vertices）<span class="arithmatex">\(\mathcal{V}_{\text{M}}\)</span>：</strong>[cite: 14]
+所有满足马尔可夫丢番图方程的自然数三元组节点[cite: 14]：
+<span class="arithmatex">\(\mathcal{V}_{\text{M}} = \left\{ (x,y,z) \in \mathbb{Z}^+ \times \mathbb{Z}^+ \times \mathbb{Z}^+ \;\middle\vert\; x^2 + y^2 + z^2 = 3xyz \right\}\)</span></p>
+<ol start="2">
+<li>
+<p><strong>边集（Edges）<span class="arithmatex">\(\mathcal{E}_{\text{M}}\)</span>：</strong>[cite: 14]
+两节点 <span class="arithmatex">\(P_1, P_2 \in \mathcal{V}_{\text{M}}\)</span> 存在无向边 <span class="arithmatex">\((P_1, P_2) \in \mathcal{E}_{\text{M}}\)</span>，当且仅当 <span class="arithmatex">\(P_2\)</span> 可由 <span class="arithmatex">\(P_1\)</span> 通过一次本原韦达跳跃算子 <span class="arithmatex">\(\mathcal{T}\)</span> 互斥重排得到[cite: 14]：
+<span class="arithmatex">\(P_2 = \mathcal{T}_x(P_1) \quad \text{或} \quad P_2 = \mathcal{T}_y(P_1) \quad \text{或} \quad P_2 = \mathcal{T}_z(P_1)\)</span></p>
+</li>
+<li>
+<p><strong>边权重函数（Weighting Function）<span class="arithmatex">\(\mathcal{W}_{\text{M}}\)</span>：</strong>[cite: 14]
+赋权函数 <span class="arithmatex">\(\mathcal{W}_{\text{M}}: \mathcal{E}_{\text{M}} \to \mathbb{R}^+\)</span> 映射节点间的拓扑能量通量，定义为两端点局域能量标量之比[cite: 14]：
+<span class="arithmatex">\(\mathcal{W}_{\text{M}}(P_1, P_2) = \vert{}E_0(P_2) - E_0(P_1)\vert{} = \vert{}(x_2+y_2+z_2) - (x_1+y_1+z_1)\vert{}\)</span></p>
+</li>
+</ol>
+<p><strong>【注释】</strong> 注意：这里的“距离”不再是连续流形上的度量 <span class="arithmatex">\(d(p,q)\)</span>，而是代数网络上的能量差[cite: 14]。两个节点之间的“拓扑距离”越远，它们的能量差越大[cite: 14]。这为后续讨论韦达跳跃的长程跃迁埋下了伏笔[cite: 14]。</p>
+</blockquote>
+<hr>
+<p><strong>图 1.2.1：马尔可夫离散图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span> 前三层节点的树状分叉演化</strong>[cite: 14]</p>
+<p>text
+                 (1,1,1)  [基态, E₀=3]
+                    │
+                    │ 韦达跳跃 𝒯_x
+                    ▼
+                 (1,1,2)  [E₀=4]
+                  ╱    ╲
+                 ╱      ╲
+         𝒯_y  ╱          ╲  𝒯_z
+               ▼            ▼
+        (1,2,5)  [E₀=8]   (1,1,5)  [E₀=7]
+        (第一激发态)</p>
+<p>注：从基态 <span class="arithmatex">\((1,1,1)\)</span> 出发，每经过一次韦达跳跃，局域能量标量 <span class="arithmatex">\(E_0\)</span> 随之增大。图中标注了每条边的跳跃算子类型（<span class="arithmatex">\(\mathcal{T}_x, \mathcal{T}_y, \mathcal{T}_z\)</span>）。</p>
+<hr>
+<h4 id="125">1.2.5 微分形式与图上代数算子的同构对应<a class="headerlink" href="#125" title="Permanent link">¶</a></h4>
+<p>在离散代数图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span> 上，微积分中的所有连续几何算子均可以被精确地翻译为图代数算子：</p>
+<table>
+<thead>
+<tr>
+<th>连续流形几何（微积分）</th>
+<th>离散代数图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span>（11T-Matrix）</th>
+<th>物理/代数意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时空点 <span class="arithmatex">\(p \in \mathcal{M}_4\)</span></td>
+<td>整数节点 <span class="arithmatex">\((x,y,z) \in \mathcal{V}_{\text{M}}\)</span></td>
+<td>能量通量的离散节点</td>
+</tr>
+<tr>
+<td>测地线（Geodesic）</td>
+<td>韦达跳跃的最短代数路径</td>
+<td>最省能量的拓扑演化轨线</td>
+</tr>
+<tr>
+<td>外微分算子 <span class="arithmatex">\(\mathrm{d}\)</span></td>
+<td>图梯度算子 <span class="arithmatex">\(\nabla_{\mathcal{G}}\)</span></td>
+<td>节点间能量差分</td>
+</tr>
+<tr>
+<td>黎曼曲率张量 <span class="arithmatex">\(R^\alpha{}_{\beta\gamma\delta}\)</span></td>
+<td>局域马尔可夫张力 <span class="arithmatex">\(\langle 3xyz \rangle / E_0\)</span></td>
+<td>网络拓扑弯曲与纠缠程度</td>
+</tr>
+<tr>
+<td>体积元 <span class="arithmatex">\(\mathrm{d}^4x \sqrt{-g}\)</span></td>
+<td>局域节点容量度数 <span class="arithmatex">\(\text{deg}(P)\)</span></td>
+<td>局域允许的最大信息熵带宽</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>【范式转换宣言】</strong> 这个对应表意味着：任何在连续流形上定义的几何问题，都可以翻译为离散图网络上的代数问题。翻译之后，原来需要用解析延拓、重整化等技巧处理的“发散”，变成了图上的有限代数运算。<strong>这就是 11T-Matrix 对“奇点恐惧”的终极解药。</strong></p>
+</blockquote>
+<p>通过这一同构映射，我们可以毫无障碍地将连续几何语言<strong>降维解构</strong>为纯粹的离散图论与代数矩阵问题。</p>
+<hr>
+<h3 id="12">§ 1.2 本节小结与思考题<a class="headerlink" href="#12" title="Permanent link">¶</a></h3>
+<h4 id="_4">【本节小结】<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<ol>
+<li>连续流形 <span class="arithmatex">\(\mathcal{M}_4\)</span> 的局域欧氏性假设在极微观尺度破裂，会导致无限大能量密度的发散假象；而 11T-Matrix 动力学依靠第一性原理内生导出的最小有效物理体积 <span class="arithmatex">\(V_{\min}\)</span> 与容量绝对上限 <span class="arithmatex">\(Q_{\text{max}}\)</span> 实现了硬截断，全程严格恪守零参数纲领（ZPP）。</li>
+<li>
+<p>宏观世界的光滑连续性，是观测仪器对 3T1S 根域网络高频韦达跳跃进行“时间平均”后的投影假象（如同电影胶片帧的连贯呈现）。</p>
+</li>
+<li>
+<p>离散代数图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span> 建立了基于马尔可夫丢番图方程顶点与韦达跳跃互斥重排边的代数结构，为代数动力学提供了确切的拓扑承载底座。</p>
+</li>
+</ol>
+<h4 id="_5">【本节思考题】<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><strong>思考题 1.2.1：</strong> 在图 1.2.1 中，从根节点 <span class="arithmatex">\((1,1,1)\)</span> 到第一激发态 <span class="arithmatex">\((1,2,5)\)</span>，计算其边权重 <span class="arithmatex">\(\mathcal{W}_{\text{M}}\)</span> 的具体数值，并说明该数值代表什么物理意义？
+<strong>参考答案：</strong> <span class="arithmatex">\(\mathcal{W}_{\text{M}}((1,1,1), (1,2,5)) = |8 - 3| = 5\)</span>。物理意义：从基态跃迁到第一激发态需要重排 5 个单位的拓扑名额能量差。</p>
+</li>
+<li>
+<p><strong>思考题 1.2.2：</strong> 尝试用电影胶片类比解释：为什么连续微积分在描述流体爆裂（湍流奇点）时会失效？如果改为图网络语言，爆裂过程变成了什么？
+<strong>提示：</strong> 流体爆裂在连续微积分中是“奇点发散”，在图网络语言中变成“局域能量通量逼近 <span class="arithmatex">\(Q_{\text{max}}\)</span>，触发拓扑粉碎”——就像电影胶片卡住时，连续的影像突然断裂成一帧一帧的静态画面。</p>
+</li>
+</ol>
+<h3 id="13-3t1s">§ 1.3 3T1S 超定域时空模型的基本公理系统<a class="headerlink" href="#13-3t1s" title="Permanent link">¶</a></h3>
+<h4 id="131-cite-15">1.3.1 公理化构建的哲学与物理必要性[cite: 15]<a class="headerlink" href="#131-cite-15" title="Permanent link">¶</a></h4>
+<p>爱因斯坦在 1905 年建构狭义相对论时，仅凭两条简洁的公理（相对性原理与光速不变原理），便彻底重塑了人类对时间与空间的认知[cite: 15]。正如爱因斯坦所言："西方科学的发展以两个伟大成就为基础：希腊哲学家发明的形式逻辑体系，以及在文艺复兴时期发现的通过系统实验找出因果关系的方法。"[cite: 15]但爱因斯坦未能预见的是：形式逻辑体系的底层，可能需要一场从连续到离散的范式革命[cite: 15]。</p>
+<p>同样地，要摆脱连续统微积分带来的"奇点迷雾"，11T-Matrix 动力学也必须建立在严密、自洽且不可简化的<strong>基本公理系统</strong>之上[cite: 15]。</p>
+<p>主流物理学将我们观测到的"三维空间 + 一维时间"（3S1T）视为不可置疑的唯一背景时空，这导致了量子力学中"非局域纠缠"（EPR 佯谬）与广义相对论中"局域定域性"的根本对立[cite: 15]。</p>
+<blockquote>
+<p><strong>【直觉破除：为什么 3S1T 无法解释量子纠缠？】</strong>[cite: 15]
+如果时空本质上只有 3S1T，那么两个相距数光年的纠缠粒子之间的"瞬间超光速感应"，就必须违背狭义相对论的光速上限[cite: 15]。但如果 3S1T 只是高维离散代数网络（3T1S）的全息投影，那么在底层根域中，这两个粒子可能仅仅是<strong>同一代数节点在不同方向上的投影分支</strong>[cite: 15]。所谓"超远距离的瞬间感应"，在根域中不过是局域代数恒等式的必然兑现[cite: 15]。</p>
+</blockquote>
+<p>为此，11T-Matrix 动力学确立了 <strong>3T1S 超定域时空模型（3T1S Super-Local Spacetime Model）</strong>，并将其凝练为四大核心公理与四项衍生法则。</p>
+<hr>
+<h4 id="132-3t1s">1.3.2 3T1S 超定域模型四大基本公理<a class="headerlink" href="#132-3t1s" title="Permanent link">¶</a></h4>
+<p>根据 11T-Matrix 统一本体论纲领，以下四条不可还原的命题构成了全体系的绝对基石：</p>
+<blockquote>
+<p><strong>【公理一：净余能量唯一本源公理】</strong>[cite: 11]
+净余能量自有永有、总量守恒，既不能被创生也不能被消灭，是所有物理结构的唯一本源，而非矩阵的产物[cite: 11]。</p>
+<p><strong>【公理二：3T1S双时空架构公理】</strong>[cite: 11]
+超定域时空天然存在根域 3T1S 与表象 3S1T 两个层级，二者遵循独立物理规则，通过投影映射建立对应关系[cite: 11]。</p>
+<p><strong>【公理三：根域名额排他性公理】</strong>[cite: 11]
+同一基础名额在同一演化步中只能占据一个本征态，不可重叠、不可复用，是离散本体的核心约束，也是泡利不相容原理、因果性的底层来源[cite: 11]。</p>
+<p><strong>【公理四：表象量投影本源公理】</strong>[cite: 11]
+所有表象物理量均由根域拓扑与名额分布单向投影生成；根域决定表象读数，表象层任何过程都无法反向修改根域的拓扑结构与名额状态[cite: 11]。</p>
+</blockquote>
+<hr>
+<h4 id="133">1.3.3 衍生的四大核心动力学法则<a class="headerlink" href="#133" title="Permanent link">¶</a></h4>
+<p>由上述四大公理，我们可严格推导出支配 3T1S 根域运转的四项代数与图论法则（在旧范式中曾被误作公理，现严格降级为核心法则）：</p>
+<blockquote>
+<p><strong>【法则一：马尔可夫丢番图约束】</strong>[cite: 15]
+在 3T1S 根域空间 <span class="arithmatex">\(\mathcal{M}_{\text{root}}\)</span> 中，基于公理一（能量守恒）与公理三（名额排他离散性），三个时间维度的局域能量通量 <span class="arithmatex">\(x, y, z \in \mathbb{Z}^+\)</span> 必须且仅能服从马尔可夫丢番图方程的代数约束[cite: 15]：
+<span class="arithmatex">\(x^2 + y^2 + z^2 = 3xyz\)</span>
+任何不满足该方程的状态在代数拓扑上具有零测度[cite: 15]。</p>
+<p><strong>【法则二：韦达跳跃动力学】</strong>[cite: 15]
+3T1S 根域中的时间演化，并非平滑连续的时间流，而是由离散的<strong>韦达跳跃算子</strong> <span class="arithmatex">\(\hat{\mathcal{T}} = \{\mathcal{T}_x, \mathcal{T}_y, \mathcal{T}_z\}\)</span> 驱动的代数状态互斥重排[cite: 15]：
+<span class="arithmatex">\(\mathcal{T}_x(x,y,z) = (3yz - x, y, z)\)</span>
+系统的动态演化等价于在马尔可夫代数树上的离散长程走步[cite: 15]。</p>
+<p><strong>【法则三：矩阵容量上限 <span class="arithmatex">\(Q_{\text{max}}\)</span> 截断】</strong>[cite: 15]
+局域 11 阶闭合张量空间 <span class="arithmatex">\(\mathcal{M}_{11}\)</span> 所能承载的最大信息通量与拓扑张力存在绝对上界 <span class="arithmatex">\(Q_{\text{max}}\)</span>：
+<span class="arithmatex">\(Q_{\text{max}} \sim 10^{62}\)</span>[cite: 15]
+（定量推导详见第 6 章 §6.2）
+当局域能量梯度逼近 <span class="arithmatex">\(Q_{\text{max}}\)</span> 时，连续投影映射自动失效，系统强制触发拓扑粉碎（Topological Shattering）与代数闭合相变[cite: 15]。</p>
+<p><strong>【法则四：全息投影与能量守恒切面】</strong>[cite: 15]
+表象空间 <span class="arithmatex">\(\mathcal{M}_{\text{pheno}}\)</span> 中的物理观测量，均由守恒切面 <span class="arithmatex">\(x + y + z = E_0\)</span> 截取马尔可夫曲面所形成的交线几何性质，在 <span class="arithmatex">\(M_1/M_2\)</span> 双时空投影矩阵对（公理二、四）作用下生成[cite: 11, 15]。</p>
+</blockquote>
+<hr>
+<h4 id="134-cite-15">1.3.4 从公理系统推导的核心定理[cite: 15]<a class="headerlink" href="#134-cite-15" title="Permanent link">¶</a></h4>
+<p>基于上述公理与法则，我们可以直接推导出关于量子非局域性与时空不对称性的核心定理[cite: 15]：</p>
+<blockquote>
+<p><strong>【定理 1.3.1（超定域性定理 Super-Locality Theorem）】</strong>[cite: 15]
+在 3S1T 表象空间中表现为"远距离非局域纠缠"的量子现象，在 3T1S 根域空间中是绝对局域且瞬时自洽的[cite: 15]。</p>
+<p><em>证明概要：</em>
+根据公理二（双时空架构）与公理四（单向投影），表象空间中相距任意空间距离 <span class="arithmatex">\(d\)</span> 的两个纠缠态粒子 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span>，其状态在 3T1S 根域中均由同一个马尔可夫节点 <span class="arithmatex">\(P_0 = (x,y,z)\)</span> 映射而来。
+当测量作用于粒子 <span class="arithmatex">\(A\)</span> 时，相当于在根域执行了一次韦达跳跃算子 <span class="arithmatex">\(\mathcal{T}_x\)</span>。由于 <span class="arithmatex">\(\mathcal{T}_x\)</span> 是直接作用于节点 <span class="arithmatex">\(P_0\)</span> 的代数映射，变换后的新节点 <span class="arithmatex">\(P_1 = (3yz-x, y, z)\)</span> 瞬间改变了粒子 <span class="arithmatex">\(B\)</span> 在表象空间的投影状态。
+整个过程发生在代数根域内部，根本不需要在 3S1T 表象空间中传递任何跨越空间距离 <span class="arithmatex">\(d\)</span> 的物理介质，因此不会突破狭义相对论的光速限制。□</p>
+</blockquote>
+<hr>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────┐
+│   3T1S 根域空间 (Root)   │
+│                         │
+│      单一代数节点         │
+│      P = (x, y, z)      │
+│         ╱      ╲        │
+│        ╱        ╲       │
+│   分支₁        分支₂     │
+└─────┬──────────┬────────┘
+      │ Π        │ Π
+      │          │
+      ▼          ▼
+┌─────────────────────────┐
+│   3S1T 表象空间 (Pheno)  │
+│                         │
+│   纠缠粒子 A ←──d──→ 纠缠粒子 B
+│   (空间距离 d，展现"超光速"表象纠缠)
+│                         │
+└─────────────────────────┘
+</code></pre></div>
+<p><em>图 1.3.1：3T1S 超定域映射下量子纠缠的代数同构物理图像</em>[cite: 15]</p>
+<hr>
+<blockquote>
+<p><strong>【定理 1.3.2（时空对称性对偶破缺定理 Symmetry Breaking Theorem）】</strong>[cite: 15]
+为什么根域是 3T1S（3 时间 1 空间），而表象是 3S1T（3 空间 1 时间）？[cite: 15]</p>
+<p><em>证明概要：</em>
+由法则一，马尔可夫方程 <span class="arithmatex">\(x^2 + y^2 + z^2 = 3xyz\)</span> 在代数结构上具有以下特征[cite: 15]：
+- <strong>三个对称二次自由度</strong>：<span class="arithmatex">\(x^2, y^2, z^2\)</span> 项构成对称的自由度基底[cite: 15]
+- <strong>一个交叉三次约束</strong>：<span class="arithmatex">\(3xyz\)</span> 项构成单向演化的代数约束[cite: 15]</p>
+<p>在守恒切面 <span class="arithmatex">\(x+y+z=E_0\)</span> 上经公理四进行投影时[cite: 15]：
+- 三个二次变量 <span class="arithmatex">\(x, y, z\)</span> 的自由通量被投影为表象空间的三维空间自由度 <span class="arithmatex">\((X, Y, Z)\)</span>——这就是"3S"的来源[cite: 15]
+- 交叉约束项 <span class="arithmatex">\(3xyz\)</span> 所诱导的单向代数树演化轨迹（韦达跳跃），被投影为表象空间中单向不可逆的时间轴 <span class="arithmatex">\(t\)</span>——这就是"1T"的来源[cite: 15]</p>
+<p>反之，在根域中[cite: 15]：
+- 三个时间维度 <span class="arithmatex">\(t_1, t_2, t_3\)</span> 对应于 <span class="arithmatex">\(x, y, z\)</span> 三个变量的独立演化通道——这就是"3T"的来源[cite: 15]
+- 一个空间维度 <span class="arithmatex">\(s\)</span> 对应于韦达跳跃所遍历的代数树的"厚度"方向——这就是"1S"的来源[cite: 15]</p>
+<p>这种"自由度"与"约束度"的对偶反转，决定了 3T1S 必定投影为 3S1T。□</p>
+</blockquote>
+<hr>
+<h3 id="13">§ 1.3 本节小结与思考题<a class="headerlink" href="#13" title="Permanent link">¶</a></h3>
+<h4 id="_6">【本节小结】<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<ol>
+<li>11T-Matrix 体系基于<strong>四大基本公理</strong>：净余能量唯一本源、3T1S双时空架构、根域名额排他性、表象量投影本源[cite: 11]。</li>
+<li>基于公理推导出的四项<strong>核心法则</strong>确立了马尔可夫方程约束、韦达跳跃动力学、矩阵容量极限 <span class="arithmatex">\(Q_{\text{max}}\)</span> 以及全息投影切面。</li>
+<li>量子非局域纠缠并非"超光速信号传输"，而是同一代数节点在 3S1T 表象空间不同分支上的全息投影[cite: 15]。</li>
+<li>3T1S 到 3S1T 的反转，本质上是代数自由度（3个通量）与演化约束度（1个交叉项）在投影映射下的对偶对换[cite: 15]。</li>
+</ol>
+<h4 id="_7">【本节思考题】<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<ol>
+<li><strong>思考题 1.3.1：</strong> 试对比爱因斯坦狭义相对论的两条公理与 11T-Matrix 的公理二、公理四，说明为什么 11T-Matrix 能够兼容量子力学的非局域性而狭义相对论不能？</li>
+<li><strong>思考题 1.3.2：</strong> 在核心法则三中，如果局域容量上限 <span class="arithmatex">\(Q_{\text{max}} \to \infty\)</span>（即容量无限），时空在逼近高能极限时会发生什么？为什么这会导致传统广义相对论的奇点？
+   <strong>提示：</strong> 回顾 §1.2.2 的数值对比。当 <span class="arithmatex">\(Q_{\text{max}} \to \infty\)</span> 时，11T-Matrix 将退化为连续统微积分，黑洞中心的曲率标量 <span class="arithmatex">\(R_{abcd}R^{abcd} \to \infty\)</span> 将重新出现——这正是广义相对论奇点的根源[cite: 15]。</li>
+</ol>
+<h3 id="14">§ 1.4 第一章总结与复习思考题<a class="headerlink" href="#14" title="Permanent link">¶</a></h3>
+<hr>
+<h4 id="141">1.4.1 第一章知识体系概览<a class="headerlink" href="#141" title="Permanent link">¶</a></h4>
+<p>本章作为《11时序矩阵代数动力学讲义》的开篇，完成了从“连续统微积分”向“离散代数拓扑”的范式转变，奠定了全书的物理与数学基石。</p>
+<p>整个第一章的逻辑递进关系如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>§1.1 破除旧范式           §1.2 建立新工具           §1.3 确立新公理
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>┌──────────────┐       ┌──────────────┐       ┌──────────────┐
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│ 诊断问题：     │ ───→ │ 提供替代方案：  │ ───→ │ 奠定理论基础： │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│ 微分算子失效   │       │ 离散图网络     │       │ 五大公理系统   │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│ 奇点本质揭露   │       │ 电影胶片类比   │       │ 超定域性定理   │
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>└──────────────┘       └──────────────┘       └──────────────┘
+</code></pre></div>
+<ol>
+<li><strong>§ 1.1 破除连续统假象：</strong> 证明微分算子 <span class="arithmatex">\(\mathrm{d}/\mathrm{d}t\)</span> 在普朗克尺度由于测量阻尼而失效，指出物理学中的“无穷大奇点”本质上是连续微积分在逼近离散底层时的坐标系拟合发散。</li>
+<li><strong>§ 1.2 建立离散代数图网络：</strong> 废黜半黎曼流形 <span class="arithmatex">\((\mathcal{M}_4, g)\)</span>，引入马尔可夫离散图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span>，并用“电影胶片离散帧”类比解释了宏观光滑运动的形成机制。</li>
+<li><strong>§ 1.3 确立基本公理系统：</strong> 建立了 3T1S 超定域时空模型的五大基本公理，证明了量子纠缠的超定域性定理，解释了 3T1S 到 3S1T 投影对偶破缺的深层原因。</li>
+</ol>
+<hr>
+<h4 id="142">1.4.2 新旧范式核心概念对照速查表<a class="headerlink" href="#142" title="Permanent link">¶</a></h4>
+<p>为了帮助读者快速梳理知识结构，表 1.4.1 归纳了传统连续统范式与 11T-Matrix 离散代数范式的映射关系：</p>
+<p><strong>表 1.4.1：传统物理范式与 11T-Matrix 代数动力学范式对照表</strong></p>
+<table>
+<thead>
+<tr>
+<th>比较维度</th>
+<th>传统连续统范式（微积分/广义相对论/QFT）</th>
+<th>11T-Matrix 离散代数范式（3T1S 超定域模型）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>时空背景</strong></td>
+<td>4 维半黎曼流形 <span class="arithmatex">\((\mathcal{M}_4, g)\)</span>（光滑、平滑、无限可分）</td>
+<td>马尔可夫离散图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span>（离散、有界、拓扑打结）</td>
+</tr>
+<tr>
+<td><strong>演化驱动</strong></td>
+<td>微分算子 <span class="arithmatex">\(\frac{\mathrm{d}}{\mathrm{d}t}\)</span>，连续微分方程组 <span class="arithmatex">\(\dot{x} = f(x)\)</span></td>
+<td>韦达跳跃算子 <span class="arithmatex">\(\hat{\mathcal{T}}\)</span>，离散代数长程跃迁轨迹</td>
+</tr>
+<tr>
+<td><strong>紫外极限处理</strong></td>
+<td>产生无穷大奇点（Singularity），依赖人工重整化截断</td>
+<td>局域矩阵容量上限 <span class="arithmatex">\(Q_{\text{max}} \sim 10^{62}\)</span> 强力截断，无奇点发散</td>
+</tr>
+<tr>
+<td><strong>量子非局域性</strong></td>
+<td>产生 EPR 佯谬，与局域光速限制发生内在冲突</td>
+<td>同一代数节点在表象空间的两个全息投影分支（超定域）</td>
+</tr>
+<tr>
+<td><strong>宏观平滑性</strong></td>
+<td>属于第一性原理（假设时空本来就是平滑的）</td>
+<td>属于统计平均投影假象（类似电影胶片帧的高频播放）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="143">1.4.3 核心定义与公理速查<a class="headerlink" href="#143" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>马尔可夫丢番图方程：</strong></li>
+</ul>
+<div class="arithmatex">\[
+x^2 + y^2 + z^2 = 3xyz \qquad (x, y, z \in \mathbb{Z}^+)
+\]</div>
+<ul>
+<li><strong>本原韦达跳跃算子（以 <span class="arithmatex">\(x\)</span> 方向为例）：</strong></li>
+</ul>
+<div class="arithmatex">\[
+\mathcal{T}_x(x, y, z) = (3yz - x, y, z)
+\]</div>
+<ul>
+<li><strong>马尔可夫图网络边权重函数：</strong></li>
+</ul>
+<div class="arithmatex">\[
+\mathcal{W}_{\text{M}}(P_1, P_2) = \vert{}E_0(P_2) - E_0(P_1)\vert{} = \vert{}(x_2+y_2+z_2) - (x_1+y_1+z_1)\vert{}
+\]</div>
+<ul>
+<li><strong>局域矩阵容量绝对上限：</strong></li>
+</ul>
+<div class="arithmatex">\[
+Q_{\text{max}} \sim 10^{62}
+\]</div>
+<ul>
+<li><strong>局域相干比特上限：</strong></li>
+</ul>
+<div class="arithmatex">\[
+N_{\text{bits}} = \log_2(Q_{\text{max}}) \approx 206 \text{ bits}
+\]</div>
+<hr>
+<h4 id="144">1.4.4 深度概念思考题<a class="headerlink" href="#144" title="Permanent link">¶</a></h4>
+<h5 id="141_1">【概念题 1.4.1】<a class="headerlink" href="#141_1" title="Permanent link">¶</a></h5>
+<p>在传统流体力学（Navier-Stokes 方程）与广义相对论中，当物理量趋于无穷大时，数学家通常认为需要建立更高级的连续函数空间（如 Sobolev 空间）。请结合 § 1.1 的内容，说明为什么“尝试在连续统框架下证明无奇点解”可能是一种方向性的错误？</p>
+<h5 id="142_1">【概念题 1.4.2】<a class="headerlink" href="#142_1" title="Permanent link">¶</a></h5>
+<p>为什么说量子力学中的“爱因斯坦-波多尔斯基-罗森（EPR）佯谬”本质上是死守 3S1T 空间而产生的心理幻觉？试用“3T1S 超定域时空模型”的公理一与公理五进行阐释。</p>
+<h5 id="143_1">【概念题 1.4.3】<a class="headerlink" href="#143_1" title="Permanent link">¶</a></h5>
+<p>说明“电影胶片类比”中，电影播放速率（如 24 帧/秒）与 11T-Matrix 体系中韦达跳跃频率的物理对应关系。如果不进行“时间平均”，在普朗克超微观尺度下观察粒子的轨迹，我们会看到什么现象？</p>
+<hr>
+<h4 id="145">1.4.5 代数计算与证明演练题<a class="headerlink" href="#145" title="Permanent link">¶</a></h4>
+<h5 id="141_2">【计算题 1.4.1（马尔可夫树节点分枝计算）】<a class="headerlink" href="#141_2" title="Permanent link">¶</a></h5>
+<p>已知马尔可夫树的第一激发态节点为 <span class="arithmatex">\(P_0 = (1, 2, 5)\)</span>。</p>
+<ol>
+<li>验证 <span class="arithmatex">\(P_0\)</span> 是否满足马尔可夫丢番图方程；</li>
+<li>分别计算由 <span class="arithmatex">\(P_0\)</span> 经过一次韦达跳跃算子 <span class="arithmatex">\(\mathcal{T}_x, \mathcal{T}_y, \mathcal{T}_z\)</span> 生成的三个新节点 <span class="arithmatex">\(P_x, P_y, P_z\)</span>；</li>
+<li>计算这三个新节点的局域能量常数 <span class="arithmatex">\(E_0(P) = x + y + z\)</span>，并指出哪一个节点属于“回退到上一层根节点的演化轨迹”。</li>
+</ol>
+<h5 id="142_2">【证明题 1.4.2（韦达跳跃代数不变量证明）】<a class="headerlink" href="#142_2" title="Permanent link">¶</a></h5>
+<p>设三元组 <span class="arithmatex">\((x, y, z)\)</span> 满足马尔可夫丢番图方程 <span class="arithmatex">\(x^2 + y^2 + z^2 = 3xyz\)</span>。
+请不依赖于几何直觉，纯粹用代数恒等式证明：代数变换后的新三元组 <span class="arithmatex">\((x', y, z) = (3yz - x, y, z)\)</span> 依然严格满足马尔可夫丢番图方程：</p>
+<div class="arithmatex">\[
+(x')^2 + y^2 + z^2 = 3x'yz
+\]</div>
+<h5 id="143_2">【分析题 1.4.3（局域相干比特上限推导）】<a class="headerlink" href="#143_2" title="Permanent link">¶</a></h5>
+<p>已知局域 11 阶矩阵的容量上限为 <span class="arithmatex">\(Q_{\text{max}} = 10^{62}\)</span>。
+若一个局域量子物理系统的信息承载状态数等于矩阵容量 <span class="arithmatex">\(Q_{\text{max}}\)</span>，请利用香农信息熵与二进制换算公式 <span class="arithmatex">\(N_{\text{bits}} = \log_2(Q_{\text{max}})\)</span>，精确计算该系统所能维系的最大相干比特数（保留至整数），并说明为什么超过这个比特数系统必然发生“拓扑粉碎/退相干”。</p>
+<hr>
+<h4 id="146">1.4.6 复习思考题参考答案与解题指导<a class="headerlink" href="#146" title="Permanent link">¶</a></h4>
+<h5 id="141_3">【计算题 1.4.1 参考答案】<a class="headerlink" href="#141_3" title="Permanent link">¶</a></h5>
+<ol>
+<li>
+<p><strong>验证：</strong>
+左式 <span class="arithmatex">\(= 1^2 + 2^2 + 5^2 = 1 + 4 + 25 = 30\)</span>；
+右式 <span class="arithmatex">\(= 3 \times 1 \times 2 \times 5 = 30\)</span>。
+左式 <span class="arithmatex">\(=\)</span> 右式，故 <span class="arithmatex">\(P_0 = (1, 2, 5)\)</span> 严格满足方程。</p>
+</li>
+<li>
+<p><strong>三个新节点计算：</strong>
+   * <span class="arithmatex">\(\mathcal{T}_x(1, 2, 5) = (3 \times 2 \times 5 - 1, 2, 5) = (29, 2, 5)\)</span>
+   * <span class="arithmatex">\(\mathcal{T}_y(1, 2, 5) = (1, 3 \times 1 \times 5 - 2, 5) = (1, 13, 5)\)</span>
+   * <span class="arithmatex">\(\mathcal{T}_z(1, 2, 5) = (1, 2, 3 \times 1 \times 2 - 5) = (1, 2, 1)\)</span></p>
+</li>
+<li>
+<p><strong>局域能量常数计算：</strong>
+   * <span class="arithmatex">\(E_0(P_x) = 29 + 2 + 5 = 36\)</span>
+   * <span class="arithmatex">\(E_0(P_y) = 1 + 13 + 5 = 19\)</span>
+   * <span class="arithmatex">\(E_0(P_z) = 1 + 2 + 1 = 4\)</span></p>
+</li>
+</ol>
+<p><strong>解析：</strong> 节点 <span class="arithmatex">\(P_z = (1, 2, 1)\)</span> 的能量常数 <span class="arithmatex">\(E_0=4\)</span> 小于原节点 <span class="arithmatex">\(P_0\)</span> 的能量常数 <span class="arithmatex">\(E_0=8\)</span>，代表沿着树分支向上回退到更早期的“低能阶梯节点”（即回到上一层节点 <span class="arithmatex">\((1,1,2)\)</span> 的等价重排）。其余两个新节点 <span class="arithmatex">\(P_x, P_y\)</span> 能量更高，代表向外发散演化的新枝干。</p>
+<h5 id="142_3">【证明题 1.4.2 参考指南】<a class="headerlink" href="#142_3" title="Permanent link">¶</a></h5>
+<p><strong>方法一（韦达定理，推荐）：</strong>
+将马尔可夫方程看作关于未知数 <span class="arithmatex">\(x\)</span> 的一元二次方程：</p>
+<div class="arithmatex">\[
+x^2 - (3yz)x + (y^2 + z^2) = 0
+\]</div>
+<p>设该方程的两个根为 <span class="arithmatex">\(x_1, x_2\)</span>。由韦达定理（Vieta's Formulas），两根之和满足：</p>
+<div class="arithmatex">\[
+x_1 + x_2 = 3yz \implies x_2 = 3yz - x_1
+\]</div>
+<p>因为 <span class="arithmatex">\(x_2\)</span> 是一元二次方程的另一个根，所以将 <span class="arithmatex">\(x_2 = 3yz - x_1\)</span> 代入方程必成立。换言之，<span class="arithmatex">\((3yz-x, y, z)\)</span> 必定满足原代数关系。代数不变量性得证。□</p>
+<p><strong>方法二（直接代数展开）：</strong>
+设 <span class="arithmatex">\(x' = 3yz - x\)</span>，计算 <span class="arithmatex">\((x')^2 + y^2 + z^2 - 3x'yz\)</span>：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;(3yz - x)^2 + y^2 + z^2 - 3(3yz - x)yz \\
+= &amp;(9y^2z^2 - 6xyz + x^2) + y^2 + z^2 - (9y^2z^2 - 3xyz) \\
+= &amp;x^2 + y^2 + z^2 - 3xyz \\
+= &amp;0 \quad \text{(由原方程)}
+\end{aligned}
+\]</div>
+<p>因此 <span class="arithmatex">\(x'\)</span> 满足方程。□</p>
+<h5 id="143_3">【分析题 1.4.3 参考答案】<a class="headerlink" href="#143_3" title="Permanent link">¶</a></h5>
+<p><strong>计算过程：</strong></p>
+<div class="arithmatex">\[
+N_{\text{bits}} = \log_2(10^{62}) = 62 \times \log_2(10) \approx 62 \times 3.321928 = 205.9595 \approx 206 \text{ bits}
+\]</div>
+<p><strong>物理意义：</strong>
+当系统尝试构建超过 206 个相互纠缠的量子比特时，其可能的状态数 <span class="arithmatex">\(2^{N} &gt; 2^{206} \approx 10^{62}\)</span>，突破了局域 11 阶矩阵所能承载的最大拓扑信息熵 <span class="arithmatex">\(Q_{\text{max}}\)</span>。系统为了防止代数崩溃，会强制释放拓扑闭合能，表现为局域相干性的“粉碎”与退相干。</p>
+<hr>
+<p><strong>（《11时序矩阵代数动力学讲义》第一卷 第 1 章 全文完）</strong></p>
+<hr>
+<h2 id="_8">四、最终评价<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<p><strong>§ 1.4 第一章总结与复习思考题 —— 审核通过。</strong></p>
+<p>§1.4 的完成标志着 <strong>《11时序矩阵代数动力学讲义》第一卷 第1章 全文完</strong>。</p>
+<p>这一章从“破除连续统幻觉”出发，经历了“建立离散图网络”、“确立公理系统”、“总结与练习”四个环节，形成了一个完整的教学闭环。读者从本章走出去时，应当已经具备了以下能力：</p>
+<ol>
+<li><strong>诊断能力：</strong> 识别连续微积分在紫外极限下的失效根源</li>
+<li><strong>建构能力：</strong> 用离散代数图网络 <span class="arithmatex">\(\mathcal{G}_{\text{Markov}}\)</span> 描述物理系统</li>
+<li><strong>应用能力：</strong> 运用五大公理分析量子纠缠、时空维度等基本问题</li>
+<li><strong>计算能力：</strong> 执行韦达跳跃、计算边权重、换算比特极限</li>
+</ol>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年9月6日 22:11:49 CST">2026年9月6日 22:11:49</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="2026年9月6日 22:11:49 CST">2026年9月6日 22:11:49</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 史建威 · 山东威海理论物理EPD工程组
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/sjw719" target="_blank" rel="noopener" title="GitHub 主页" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:1625027134@qq.com" target="_blank" rel="noopener" title="联系邮箱" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "toc.follow", "content.code.copy", "content.code.annotate", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../js/katex.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
