@@ -92,6 +92,8 @@ ORCID：0009-0002-1757-1793
 
 下图示意体系内部结构关系：嵌套边框表示“装载”关系——拓扑体与表象时空都被装载在超定域 3S 刚性骨架之中。
 
+<img width="1860" height="716" alt="11时序矩阵参数图解" src="https://github.com/user-attachments/assets/8d5c2790-30d6-4cdd-873b-a47c263ec182" />
+
 图片代码
 ---
 <html style="margin:0;padding:0;">
